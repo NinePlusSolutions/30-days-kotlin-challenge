@@ -2,13 +2,13 @@
 For Training - 30 days kotlin challenge
 
 <div align="center">
-<h1 align="center">Hi <img width="35" src="https://github.com/NinePlusSolutions/30-days-kotlin-challenge/waving.gif">, I'm Johnny</h1>
+<h1 align="center">Hi <img width="35" src="https://github.com/NinePlusSolutions/30-days-kotlin-challenge/blob/main/waving.gif">, I'm Johnny</h1>
 <h4 align="center">A Software Engineer and also a PM...Welcome to Nine+ Training!</h4>
 </div>
 
 <div align="center">
   <a href="https://github.com/NinePlusSolutions/30-days-kotlin-challenge/">
-  <img  src="https://github.com/NinePlusSolutions/30-days-kotlin-challenge/grid-snake.svg"
+  <img  src="https://github.com/NinePlusSolutions/30-days-kotlin-challenge/blob/main/grid-snake.svg"
        alt="snake" /></a>
 </div>
 
