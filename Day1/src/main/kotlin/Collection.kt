@@ -3,8 +3,6 @@
  * Collection types(List , Map , Set)
  */
 
-package hello
-
 fun main(args: Array<String>) {
     val number:MutableList<Int> = mutableListOf(1,2,3);
     val readOnlyNumbers:List<Int> = number;
