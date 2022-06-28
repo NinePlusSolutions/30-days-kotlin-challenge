@@ -16,5 +16,6 @@
     <string name="btn_clr">CLR</string>
     <string name="btn_Plus">+</string>
     <string name="txt_0">0</string>
+    <string name="txt_.">.</string>
     <string name="btn_Result">=</string>
 </resources>

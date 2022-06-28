@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     TextView tvResult;
+    String op= "+";
+    String oldNumber="";
     Boolean newOperation = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void numberEvent(View view) {
+        if(newOperation){
+            tvResult.setText("");
+        }
+        newOperation = false;
         String number = tvResult.getText().toString();
         switch (view.getId()){
             case R.id.btnOne:
@@ -50,11 +56,53 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btnZero:
                 number += "0";
                 break;
+            case R.id.btnDot:
+                number += ".";
+                break;
         }
         tvResult.setText(number);
     }
 
     public void clearnEvent(View view) {
         tvResult.setText("");
+    }
+
+    public void operatorEvent(View view) {
+        newOperation = true;
+        oldNumber = tvResult.getText().toString();
+        switch (view.getId()){
+            case R.id.btnDivide:
+                op = "/";
+                break;
+            case R.id.btnMultiply:
+                op = "*";
+                break;
+            case R.id.btnSubtract:
+                op = "-";
+                break;
+            case R.id.btnPlus:
+                op = "+";
+                break;
+        }
+    }
+
+    public void resultEvent(View view) {
+        String newNumber = tvResult.getText().toString();
+        double result = 0.0;
+        switch (op){
+            case "+":
+                result = Double.parseDouble(oldNumber) + Double.parseDouble(newNumber);
+                break;
+            case "-":
+                result = Double.parseDouble(oldNumber) - Double.parseDouble(newNumber);
+                break;
+            case "*":
+                result = Double.parseDouble(oldNumber) * Double.parseDouble(newNumber);
+                break;
+            case "/":
+                result = Double.parseDouble(oldNumber) / Double.parseDouble(newNumber);
+                break;
+        }
+        tvResult.setText(result+"");
     }
 }
