@@ -6,35 +6,37 @@
     android:background="#2E2C2C"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tv_Screen_2"
+    <EditText
+        android:id="@+id/edt"
         android:layout_width="match_parent"
-        android:layout_height="111dp" />
+        android:layout_height="111dp"
+        android:textColor="@color/white"
+        android:textSize="50sp"/>
 
     <Button
         android:id="@+id/btn_Seven"
         style="@style/button"
-        android:layout_below="@id/tv_Screen_2"
+        android:layout_below="@id/edt"
         android:text="@string/btn_7" />
 
     <Button
         android:id="@+id/btn_Eight"
         style="@style/button"
-        android:layout_below="@id/tv_Screen_2"
+        android:layout_below="@id/edt"
         android:layout_toEndOf="@id/btn_Seven"
         android:text="@string/btn_8" />
 
     <Button
         android:id="@+id/btn_Nine"
         style="@style/button"
-        android:layout_below="@id/tv_Screen_2"
+        android:layout_below="@id/edt"
         android:layout_toEndOf="@id/btn_Eight"
         android:text="@string/btn_9" />
 
     <Button
         android:id="@+id/btn_Divide"
         style="@style/button"
-        android:layout_below="@id/tv_Screen_2"
+        android:layout_below="@id/edt"
         android:layout_toEndOf="@id/btn_Nine"
         android:text="@string/btn_Divide" />
 
@@ -122,7 +124,7 @@
         android:text="@string/btn_Add" />
 
     <Button
-        android:id="@+id/btnEqual"
+        android:id="@+id/btn_Equal"
         android:layout_width="390dp"
         android:layout_height="85dp"
         android:layout_below="@id/btn_Dot"
