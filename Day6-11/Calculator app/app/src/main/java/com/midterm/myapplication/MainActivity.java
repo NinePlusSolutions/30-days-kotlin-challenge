@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     private Button btn_1;
     private Button btn_2;
@@ -168,8 +168,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     // ------------------------- Set up onclick button ---------------------------
-    @Override
-    public void onClick(View v) {
+    public void btn_OnClick(View v) {
         int id = v.getId();
         switch(id) {
             case R.id.btn_0:
@@ -229,18 +228,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_add = findViewById(R.id.btn_add);
         btn_sub = findViewById(R.id.btn_sub);
         btn_clear = findViewById(R.id.btn_clear);
-
-        btn_1.setOnClickListener(this);
-        btn_2.setOnClickListener(this);
-        btn_3.setOnClickListener(this);
-        btn_4.setOnClickListener(this);
-        btn_5.setOnClickListener(this);
-        btn_6.setOnClickListener(this);
-        btn_7.setOnClickListener(this);
-        btn_8.setOnClickListener(this);
-        btn_9.setOnClickListener(this);
-        btn_0.setOnClickListener(this);
-        btn_dot.setOnClickListener(this);
     }
 
     // kiem tra so thap phan
