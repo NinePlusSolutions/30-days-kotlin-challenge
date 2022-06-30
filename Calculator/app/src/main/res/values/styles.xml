@@ -1,9 +1,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-<!-- Base application theme. -->
-    <style name="button" >
+    <style name="button_number" >
         <item name="android:layout_width">88dp</item>
         <item name="android:layout_height">88dp</item>
         <item name="android:textSize">30sp</item>
         <item name="android:layout_marginStart">12dp</item>
+        <item name="android:backgroundTint">#36A8EA</item>
+    </style>
+    <style name="button_operator">
+        <item name="android:layout_width">88dp</item>
+        <item name="android:layout_height">88dp</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:backgroundTint">#EAA536</item>
+    </style>
+    <style name="button_equal">
+        <item name="android:layout_width">390dp</item>
+        <item name="android:layout_height">88dp</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:backgroundTint">#EAA536</item>
     </style>
 </resources>

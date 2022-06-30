@@ -15,47 +15,47 @@
 
     <Button
         android:id="@+id/btn_Seven"
-        style="@style/button"
+        style="@style/button_number"
         android:layout_below="@id/edt"
         android:text="@string/btn_7" />
 
     <Button
         android:id="@+id/btn_Eight"
-        style="@style/button"
+        style="@style/button_number"
         android:layout_below="@id/edt"
         android:layout_toEndOf="@id/btn_Seven"
         android:text="@string/btn_8" />
 
     <Button
         android:id="@+id/btn_Nine"
-        style="@style/button"
+        style="@style/button_number"
         android:layout_below="@id/edt"
         android:layout_toEndOf="@id/btn_Eight"
         android:text="@string/btn_9" />
 
     <Button
         android:id="@+id/btn_Divide"
-        style="@style/button"
+        style="@style/button_operator"
         android:layout_below="@id/edt"
         android:layout_toEndOf="@id/btn_Nine"
         android:text="@string/btn_Divide" />
 
     <Button
         android:id="@+id/btn_Four"
-        style="@style/button"
+        style="@style/button_number"
         android:layout_below="@id/btn_Nine"
         android:text="@string/btn_4" />
 
     <Button
         android:id="@+id/btn_Five"
-        style="@style/button"
+        style="@style/button_number"
         android:layout_below="@id/btn_Nine"
         android:layout_toEndOf="@id/btn_Four"
         android:text="@string/btn_5" />
 
     <Button
         android:id="@+id/btn_Six"
-        style="@style/button"
+        style="@style/button_number"
         android:layout_below="@id/btn_Nine"
         android:layout_marginTop="1dp"
         android:layout_toEndOf="@id/btn_Five"
@@ -64,70 +64,68 @@
 
     <Button
         android:id="@+id/btn_Multiply"
-        style="@style/button"
+        style="@style/button_operator"
         android:layout_below="@id/btn_Nine"
         android:layout_toEndOf="@id/btn_Six"
         android:text="@string/btn_Multi" />
 
     <Button
         android:id="@+id/btn_One"
-        style="@style/button"
+        style="@style/button_number"
         android:layout_below="@id/btn_Four"
         android:text="@string/btn_1" />
 
     <Button
         android:id="@+id/btn_Two"
-        style="@style/button"
+        style="@style/button_number"
         android:layout_below="@id/btn_Four"
         android:layout_toEndOf="@id/btn_One"
         android:text="@string/btn_2" />
 
     <Button
         android:id="@+id/btn_Three"
-        style="@style/button"
+        style="@style/button_number"
         android:layout_below="@id/btn_Four"
         android:layout_toEndOf="@id/btn_Two"
         android:text="@string/btn_3" />
 
     <Button
         android:id="@+id/btn_Minus"
-        style="@style/button"
+        style="@style/button_operator"
         android:layout_below="@id/btn_Multiply"
         android:layout_toEndOf="@id/btn_Three"
         android:text="@string/btn_Minus" />
 
     <Button
         android:id="@+id/btn_Dot"
-        style="@style/button"
+        style="@style/button_operator"
         android:layout_below="@id/btn_One"
         android:text="@string/btn_Dot" />
 
     <Button
         android:id="@+id/btn_Zero"
-        style="@style/button"
+        style="@style/button_number"
         android:layout_below="@id/btn_One"
         android:layout_toEndOf="@id/btn_Dot"
         android:text="@string/btn_0" />
 
     <Button
         android:id="@+id/btn_Clear"
-        style="@style/button"
+        style="@style/button_operator"
         android:layout_below="@id/btn_One"
         android:layout_toEndOf="@id/btn_Zero"
         android:text="@string/btn_Clear" />
 
     <Button
         android:id="@+id/btn_Add"
-        style="@style/button"
+        style="@style/button_operator"
         android:layout_below="@id/btn_One"
         android:layout_toEndOf="@id/btn_Clear"
         android:text="@string/btn_Add" />
 
     <Button
         android:id="@+id/btn_Equal"
-        android:layout_width="390dp"
-        android:layout_height="85dp"
+        style="@style/button_equal"
         android:layout_below="@id/btn_Dot"
-        android:layout_marginStart="12dp"
         android:text="@string/btn_Equal" />
 </RelativeLayout>

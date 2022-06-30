@@ -2,23 +2,35 @@ package com.example.calculator;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    Button btn_0, btn_1, btn_2, btn_3, btn_4, btn_5, btn_6,
-            btn_7, btn_8, btn_9, btn_Add, btn_Minus, btn_Divide,
-            btn_Mul, btn_Dot, btn_Clear, btn_Equal;
+    private Button btn_0;
+    private Button btn_1;
+    private Button btn_2;
+    private Button btn_3;
+    private Button btn_4;
+    private Button btn_5;
+    private Button btn_6;
+    private Button btn_7;
+    private Button btn_8;
+    private Button btn_9;
+    private Button btn_Add;
+    private Button btn_Minus;
+    private Button btn_Divide;
+    private Button btn_Mul;
+    private Button btn_Dot;
+    private Button btn_Clear;
+    private Button btn_Equal;
 
-    EditText numberEditText;
+    private EditText numberEditText;
 
     float mValueOne, mValueTwo;
 
     boolean mAddition, mMinus, mMultiplication, mDivision;
-
 
     @SuppressLint("SetTextI18n")
     @Override
