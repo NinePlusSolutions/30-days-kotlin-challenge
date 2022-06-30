@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btn_Clear;
     private Button btn_Equal;
 
-    private EditText numberEditText;
+    private EditText numberEdit;
 
     private float mValueOne, mValueTwo;
 
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_Divide = findViewById(R.id.btn_Divide);
         btn_Clear = findViewById(R.id.btn_Clear);
         btn_Equal = findViewById(R.id.btn_Equal);
-        numberEditText = findViewById(R.id.edt);
+        numberEdit = findViewById(R.id.edt);
 
         btn_0.setOnClickListener(this);
         btn_1.setOnClickListener(this);
@@ -71,53 +71,53 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btn_Add.setOnClickListener(v -> {
 
-            if (numberEditText == null) {
-                numberEditText.setText("");
+            if (numberEdit == null) {
+                numberEdit.setText("");
             } else {
-                mValueOne = Float.parseFloat(numberEditText.getText() + "");
+                mValueOne = Float.parseFloat(numberEdit.getText() + "");
                 isAddition = true;
-                numberEditText.setText(null);
+                numberEdit.setText(null);
             }
         });
 
         btn_Minus.setOnClickListener(v -> {
-            mValueOne = Float.parseFloat(numberEditText.getText() + "");
+            mValueOne = Float.parseFloat(numberEdit.getText() + "");
             isMinus = true;
-            numberEditText.setText(null);
+            numberEdit.setText(null);
         });
 
         btn_Mul.setOnClickListener(v -> {
-            mValueOne = Float.parseFloat(numberEditText.getText() + "");
+            mValueOne = Float.parseFloat(numberEdit.getText() + "");
             isMultiplication = true;
-            numberEditText.setText(null);
+            numberEdit.setText(null);
         });
 
         btn_Divide.setOnClickListener(v -> {
-            mValueOne = Float.parseFloat(numberEditText.getText() + "");
+            mValueOne = Float.parseFloat(numberEdit.getText() + "");
             isDivision = true;
-            numberEditText.setText(null);
+            numberEdit.setText(null);
         });
 
         btn_Equal.setOnClickListener(v -> {
-            mValueTwo = Float.parseFloat(numberEditText.getText() + "");
+            mValueTwo = Float.parseFloat(numberEdit.getText() + "");
 
             if (isAddition) {
-                numberEditText.setText(mValueOne + mValueTwo + "");
+                numberEdit.setText(mValueOne + mValueTwo + "");
                 isAddition = false;
             }
 
             if (isMinus) {
-                numberEditText.setText(mValueOne - mValueTwo + "");
+                numberEdit.setText(mValueOne - mValueTwo + "");
                 isMinus = false;
             }
 
             if (isMultiplication) {
-                numberEditText.setText(mValueOne * mValueTwo + "");
+                numberEdit.setText(mValueOne * mValueTwo + "");
                 isMultiplication = false;
             }
 
             if (isDivision) {
-                numberEditText.setText(mValueOne / mValueTwo + "");
+                numberEdit.setText(mValueOne / mValueTwo + "");
                 isDivision = false;
             }
         });
@@ -128,51 +128,51 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int id = v.getId();
         switch (id) {
             case R.id.btn_Zero:
-                numberEditText.setText(numberEditText.getText() + "0");
+                numberEdit.setText(numberEdit.getText() + "0");
                 break;
 
             case R.id.btn_One:
-                numberEditText.setText(numberEditText.getText() + "1");
+                numberEdit.setText(numberEdit.getText() + "1");
                 break;
 
             case R.id.btn_Two:
-                numberEditText.setText(numberEditText.getText() + "2");
+                numberEdit.setText(numberEdit.getText() + "2");
                 break;
 
             case R.id.btn_Three:
-                numberEditText.setText(numberEditText.getText() + "3");
+                numberEdit.setText(numberEdit.getText() + "3");
                 break;
 
             case R.id.btn_Four:
-                numberEditText.setText(numberEditText.getText() + "4");
+                numberEdit.setText(numberEdit.getText() + "4");
                 break;
 
             case R.id.btn_Five:
-                numberEditText.setText(numberEditText.getText() + "5");
+                numberEdit.setText(numberEdit.getText() + "5");
                 break;
 
             case R.id.btn_Six:
-                numberEditText.setText(numberEditText.getText() + "6");
+                numberEdit.setText(numberEdit.getText() + "6");
                 break;
 
             case R.id.btn_Seven:
-                numberEditText.setText(numberEditText.getText() + "7");
+                numberEdit.setText(numberEdit.getText() + "7");
                 break;
 
             case R.id.btn_Eight:
-                numberEditText.setText(numberEditText.getText() + "8");
+                numberEdit.setText(numberEdit.getText() + "8");
                 break;
 
             case R.id.btn_Nine:
-                numberEditText.setText(numberEditText.getText() + "9");
+                numberEdit.setText(numberEdit.getText() + "9");
                 break;
 
             case R.id.btn_Dot:
-                numberEditText.setText(numberEditText.getText() + ".");
+                numberEdit.setText(numberEdit.getText() + ".");
                 break;
 
             case R.id.btn_Clear:
-                numberEditText.setText("");
+                numberEdit.setText("");
                 break;
         }
     }
