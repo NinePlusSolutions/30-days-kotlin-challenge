@@ -1,13 +1,13 @@
 package com.example.calculator;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button btn_0;
     private Button btn_1;
     private Button btn_2;
@@ -28,11 +28,10 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText numberEditText;
 
-    float mValueOne, mValueTwo;
+    private float mValueOne, mValueTwo;
 
-    boolean mAddition, mMinus, mMultiplication, mDivision;
+    private boolean isAddition, isMinus, isMultiplication, isDivision;
 
-    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,27 +56,18 @@ public class MainActivity extends AppCompatActivity {
         btn_Equal = findViewById(R.id.btn_Equal);
         numberEditText = findViewById(R.id.edt);
 
-        btn_1.setOnClickListener(v -> numberEditText.setText(numberEditText.getText() + "1"));
-
-        btn_2.setOnClickListener(v -> numberEditText.setText(numberEditText.getText() + "2"));
-
-        btn_3.setOnClickListener(v -> numberEditText.setText(numberEditText.getText() + "3"));
-
-        btn_4.setOnClickListener(v -> numberEditText.setText(numberEditText.getText() + "4"));
-
-        btn_5.setOnClickListener(v -> numberEditText.setText(numberEditText.getText() + "5"));
-
-        btn_6.setOnClickListener(v -> numberEditText.setText(numberEditText.getText() + "6"));
-
-        btn_7.setOnClickListener(v -> numberEditText.setText(numberEditText.getText() + "7"));
-
-        btn_8.setOnClickListener(v -> numberEditText.setText(numberEditText.getText() + "8"));
-
-        btn_9.setOnClickListener(v -> numberEditText.setText(numberEditText.getText() + "9"));
-
-        btn_0.setOnClickListener(v -> numberEditText.setText(numberEditText.getText() + "0"));
-
-        btn_Dot.setOnClickListener(v -> numberEditText.setText(numberEditText.getText() + "."));
+        btn_0.setOnClickListener(this);
+        btn_1.setOnClickListener(this);
+        btn_2.setOnClickListener(this);
+        btn_3.setOnClickListener(this);
+        btn_4.setOnClickListener(this);
+        btn_5.setOnClickListener(this);
+        btn_6.setOnClickListener(this);
+        btn_7.setOnClickListener(this);
+        btn_8.setOnClickListener(this);
+        btn_9.setOnClickListener(this);
+        btn_Dot.setOnClickListener(this);
+        btn_Clear.setOnClickListener(this);
 
         btn_Add.setOnClickListener(v -> {
 
@@ -85,54 +75,107 @@ public class MainActivity extends AppCompatActivity {
                 numberEditText.setText("");
             } else {
                 mValueOne = Float.parseFloat(numberEditText.getText() + "");
-                mAddition = true;
+                isAddition = true;
                 numberEditText.setText(null);
             }
         });
 
         btn_Minus.setOnClickListener(v -> {
             mValueOne = Float.parseFloat(numberEditText.getText() + "");
-            mMinus = true;
+            isMinus = true;
             numberEditText.setText(null);
         });
 
         btn_Mul.setOnClickListener(v -> {
             mValueOne = Float.parseFloat(numberEditText.getText() + "");
-            mMultiplication = true;
+            isMultiplication = true;
             numberEditText.setText(null);
         });
 
         btn_Divide.setOnClickListener(v -> {
             mValueOne = Float.parseFloat(numberEditText.getText() + "");
-            mDivision = true;
+            isDivision = true;
             numberEditText.setText(null);
         });
 
         btn_Equal.setOnClickListener(v -> {
             mValueTwo = Float.parseFloat(numberEditText.getText() + "");
 
-            if (mAddition) {
+            if (isAddition) {
                 numberEditText.setText(mValueOne + mValueTwo + "");
-                mAddition = false;
+                isAddition = false;
             }
 
-            if (mMinus) {
+            if (isMinus) {
                 numberEditText.setText(mValueOne - mValueTwo + "");
-                mMinus = false;
+                isMinus = false;
             }
 
-            if (mMultiplication) {
+            if (isMultiplication) {
                 numberEditText.setText(mValueOne * mValueTwo + "");
-                mMultiplication = false;
+                isMultiplication = false;
             }
 
-            if (mDivision) {
+            if (isDivision) {
                 numberEditText.setText(mValueOne / mValueTwo + "");
-                mDivision = false;
+                isDivision = false;
             }
         });
-
-        btn_Clear.setOnClickListener(v -> numberEditText.setText(""));
-
     }
+
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+        switch (id) {
+            case R.id.btn_Zero:
+                numberEditText.setText(numberEditText.getText() + "0");
+                break;
+
+            case R.id.btn_One:
+                numberEditText.setText(numberEditText.getText() + "1");
+                break;
+
+            case R.id.btn_Two:
+                numberEditText.setText(numberEditText.getText() + "2");
+                break;
+
+            case R.id.btn_Three:
+                numberEditText.setText(numberEditText.getText() + "3");
+                break;
+
+            case R.id.btn_Four:
+                numberEditText.setText(numberEditText.getText() + "4");
+                break;
+
+            case R.id.btn_Five:
+                numberEditText.setText(numberEditText.getText() + "5");
+                break;
+
+            case R.id.btn_Six:
+                numberEditText.setText(numberEditText.getText() + "6");
+                break;
+
+            case R.id.btn_Seven:
+                numberEditText.setText(numberEditText.getText() + "7");
+                break;
+
+            case R.id.btn_Eight:
+                numberEditText.setText(numberEditText.getText() + "8");
+                break;
+
+            case R.id.btn_Nine:
+                numberEditText.setText(numberEditText.getText() + "9");
+                break;
+
+            case R.id.btn_Dot:
+                numberEditText.setText(numberEditText.getText() + ".");
+                break;
+
+            case R.id.btn_Clear:
+                numberEditText.setText("");
+                break;
+        }
+    }
+
+
 }
