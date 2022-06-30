@@ -1,5 +1,6 @@
 package com.example.calculator;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,174 +9,171 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button btn_0;
-    private Button btn_1;
-    private Button btn_2;
-    private Button btn_3;
-    private Button btn_4;
-    private Button btn_5;
-    private Button btn_6;
-    private Button btn_7;
-    private Button btn_8;
-    private Button btn_9;
-    private Button btn_Add;
-    private Button btn_Minus;
-    private Button btn_Divide;
-    private Button btn_Mul;
-    private Button btn_Dot;
-    private Button btn_Clear;
-    private Button btn_Equal;
 
-    private EditText numberEdit;
-
-    private float mValueOne, mValueTwo;
-
-    private boolean isAddition, isMinus, isMultiplication, isDivision;
-
+    // this line is a comment the warning issue, when it fixed, I will remove
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn_0 = findViewById(R.id.btn_Zero);
-        btn_1 = findViewById(R.id.btn_One);
-        btn_2 = findViewById(R.id.btn_Two);
-        btn_3 = findViewById(R.id.btn_Three);
-        btn_4 = findViewById(R.id.btn_Four);
-        btn_5 = findViewById(R.id.btn_Five);
-        btn_6 = findViewById(R.id.btn_Six);
-        btn_7 = findViewById(R.id.btn_Seven);
-        btn_8 = findViewById(R.id.btn_Eight);
-        btn_9 = findViewById(R.id.btn_Nine);
-        btn_Dot = findViewById(R.id.btn_Dot);
-        btn_Add = findViewById(R.id.btn_Add);
-        btn_Minus = findViewById(R.id.btn_Minus);
-        btn_Mul = findViewById(R.id.btn_Multiply);
-        btn_Divide = findViewById(R.id.btn_Divide);
-        btn_Clear = findViewById(R.id.btn_Clear);
-        btn_Equal = findViewById(R.id.btn_Equal);
+        btnNum0 = findViewById(R.id.btnNum0);
+        btnNum1 = findViewById(R.id.btnNum1);
+        btnNum2 = findViewById(R.id.btnNum2);
+        btnNum3 = findViewById(R.id.btnNum3);
+        btnNum4 = findViewById(R.id.btnNum4);
+        btnNum5 = findViewById(R.id.btnNum5);
+        btnNum6 = findViewById(R.id.btnNum6);
+        btnNum7 = findViewById(R.id.btnNum7);
+        btnNum8 = findViewById(R.id.btnNum8);
+        btnNum9 = findViewById(R.id.btnNum9);
+        btnDot = findViewById(R.id.btnDot);
+        btnAdd = findViewById(R.id.btnAdd);
+        btnMinus = findViewById(R.id.btnMinus);
+        btnMul = findViewById(R.id.btnMul);
+        btnDivide = findViewById(R.id.btnDivide);
+        btnClear = findViewById(R.id.btnClear);
+        btnEqual = findViewById(R.id.btnEqual);
         numberEdit = findViewById(R.id.edt);
 
-        btn_0.setOnClickListener(this);
-        btn_1.setOnClickListener(this);
-        btn_2.setOnClickListener(this);
-        btn_3.setOnClickListener(this);
-        btn_4.setOnClickListener(this);
-        btn_5.setOnClickListener(this);
-        btn_6.setOnClickListener(this);
-        btn_7.setOnClickListener(this);
-        btn_8.setOnClickListener(this);
-        btn_9.setOnClickListener(this);
-        btn_Dot.setOnClickListener(this);
-        btn_Clear.setOnClickListener(this);
+        this.setListener();
 
-        btn_Add.setOnClickListener(v -> {
+        btnAdd.setOnClickListener(v -> {
 
             if (numberEdit == null) {
+
                 numberEdit.setText("");
             } else {
-                mValueOne = Float.parseFloat(numberEdit.getText() + "");
+                valueOne = Float.parseFloat(numberEdit.getText() + "");
                 isAddition = true;
                 numberEdit.setText(null);
             }
         });
 
-        btn_Minus.setOnClickListener(v -> {
-            mValueOne = Float.parseFloat(numberEdit.getText() + "");
+        btnMinus.setOnClickListener(v -> {
+            valueOne = Float.parseFloat(numberEdit.getText() + "");
             isMinus = true;
             numberEdit.setText(null);
         });
 
-        btn_Mul.setOnClickListener(v -> {
-            mValueOne = Float.parseFloat(numberEdit.getText() + "");
+        btnMul.setOnClickListener(v -> {
+            valueOne = Float.parseFloat(numberEdit.getText() + "");
             isMultiplication = true;
             numberEdit.setText(null);
         });
 
-        btn_Divide.setOnClickListener(v -> {
-            mValueOne = Float.parseFloat(numberEdit.getText() + "");
+        btnDivide.setOnClickListener(v -> {
+            valueOne = Float.parseFloat(numberEdit.getText() + "");
             isDivision = true;
             numberEdit.setText(null);
         });
 
-        btn_Equal.setOnClickListener(v -> {
-            mValueTwo = Float.parseFloat(numberEdit.getText() + "");
+        btnEqual.setOnClickListener(v -> {
+            valueTwo = Float.parseFloat(numberEdit.getText() + "");
 
             if (isAddition) {
-                numberEdit.setText(mValueOne + mValueTwo + "");
+                numberEdit.setText(valueOne + valueTwo + "");
                 isAddition = false;
             }
 
             if (isMinus) {
-                numberEdit.setText(mValueOne - mValueTwo + "");
+                numberEdit.setText(valueOne - valueTwo + "");
                 isMinus = false;
             }
 
             if (isMultiplication) {
-                numberEdit.setText(mValueOne * mValueTwo + "");
+                numberEdit.setText(valueOne * valueTwo + "");
                 isMultiplication = false;
             }
 
             if (isDivision) {
-                numberEdit.setText(mValueOne / mValueTwo + "");
+                numberEdit.setText(valueOne / valueTwo + "");
                 isDivision = false;
             }
         });
     }
 
+    // this line is a comment the warning issue, when it fixed, I will remove
+    @SuppressLint({"NonConstantResourceId", "SetTextI18n"})
     @Override
     public void onClick(View v) {
         int id = v.getId();
         switch (id) {
-            case R.id.btn_Zero:
-                numberEdit.setText(numberEdit.getText() + "0");
+            case R.id.btnNum0:
+                numberEdit.setText(String.format("%s 0", numberEdit.getText()));
                 break;
 
-            case R.id.btn_One:
+            case R.id.btnNum1:
                 numberEdit.setText(numberEdit.getText() + "1");
                 break;
 
-            case R.id.btn_Two:
+            case R.id.btnNum2:
                 numberEdit.setText(numberEdit.getText() + "2");
                 break;
 
-            case R.id.btn_Three:
+            case R.id.btnNum3:
                 numberEdit.setText(numberEdit.getText() + "3");
                 break;
 
-            case R.id.btn_Four:
+            case R.id.btnNum4:
                 numberEdit.setText(numberEdit.getText() + "4");
                 break;
 
-            case R.id.btn_Five:
+            case R.id.btnNum5:
                 numberEdit.setText(numberEdit.getText() + "5");
                 break;
 
-            case R.id.btn_Six:
+            case R.id.btnNum6:
                 numberEdit.setText(numberEdit.getText() + "6");
                 break;
 
-            case R.id.btn_Seven:
+            case R.id.btnNum7:
                 numberEdit.setText(numberEdit.getText() + "7");
                 break;
 
-            case R.id.btn_Eight:
+            case R.id.btnNum8:
                 numberEdit.setText(numberEdit.getText() + "8");
                 break;
 
-            case R.id.btn_Nine:
+            case R.id.btnNum9:
                 numberEdit.setText(numberEdit.getText() + "9");
                 break;
 
-            case R.id.btn_Dot:
+            case R.id.btnDot:
                 numberEdit.setText(numberEdit.getText() + ".");
                 break;
 
-            case R.id.btn_Clear:
+            case R.id.btnClear:
                 numberEdit.setText("");
+                break;
+
+            default:
                 break;
         }
     }
 
+    private Button btnNum0, btnNum1, btnNum2, btnNum3, btnNum4, btnNum5, btnNum6, btnNum7,
+            btnNum8, btnNum9, btnAdd, btnMinus, btnDivide, btnMul, btnDot, btnClear, btnEqual;
 
+    private EditText numberEdit;
+
+    private float valueOne, valueTwo;
+
+    private boolean isAddition, isMinus, isMultiplication, isDivision;
+
+
+    private void setListener() {
+        btnNum0.setOnClickListener(this);
+        btnNum1.setOnClickListener(this);
+        btnNum2.setOnClickListener(this);
+        btnNum3.setOnClickListener(this);
+        btnNum4.setOnClickListener(this);
+        btnNum5.setOnClickListener(this);
+        btnNum6.setOnClickListener(this);
+        btnNum7.setOnClickListener(this);
+        btnNum8.setOnClickListener(this);
+        btnNum9.setOnClickListener(this);
+        btnDot.setOnClickListener(this);
+        btnClear.setOnClickListener(this);
+    }
 }
