@@ -2,6 +2,7 @@ package com.ngockhanh.caculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -84,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     public void resultEvent(View view) {
         String newNumber = tvResult.getText().toString();
         double result = 0.0;
