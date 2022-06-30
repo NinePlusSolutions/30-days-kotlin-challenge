@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#137365</color>
     <color name="colorAccent">#DF2766</color>
     <color name="selected">#F46797</color>
-    <color name="btn_clr">#808080</color>
+    <color name="btn_clr">#1970B5</color>
     <color name="operator_btn_clr">#34D5C5</color>
-    <color name="green">#C0C0C0</color>
+    <color name="green">#5FCAC0</color>
 </resources>
