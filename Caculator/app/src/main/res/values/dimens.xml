@@ -2,6 +2,7 @@
 <resources>
     <dimen name="sp_24">24sp</dimen>
     <dimen name="dp_2">2dp</dimen>
-    <dimen name="_15dp">15dp</dimen>
-    <dimen name="_48sp">48sp</dimen>
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="sp_48">48sp</dimen>
+    <dimen name="dp_200">200dp</dimen>
 </resources>

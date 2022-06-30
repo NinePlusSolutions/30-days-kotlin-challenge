@@ -4,18 +4,18 @@
     <string name="txt_7">7</string>
     <string name="txt_8">8</string>
     <string name="txt_9">9</string>
-    <string name="btn_Divide">/</string>
-    <string name="btn_Multiply">*</string>
-    <string name="btn_Subtract">-</string>
     <string name="txt_4">4</string>
     <string name="txt_5">5</string>
     <string name="txt_6">6</string>
     <string name="txt_1">1</string>
     <string name="txt_2">2</string>
     <string name="txt_3">3</string>
-    <string name="btn_clr">CLR</string>
-    <string name="btn_Plus">+</string>
     <string name="txt_0">0</string>
     <string name="txt_.">.</string>
+    <string name="btn_Divide">/</string>
+    <string name="btn_Multiply">*</string>
+    <string name="btn_Subtract">-</string>
+    <string name="btn_clr">CLR</string>
+    <string name="btn_Plus">+</string>
     <string name="btn_Result">=</string>
 </resources>

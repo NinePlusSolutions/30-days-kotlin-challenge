@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         tvResult.setText(number);
     }
 
-    public void clearnEvent(View view) {
+    public void cleanEvent(View view) {
         tvResult.setText("");
     }
 
@@ -85,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @SuppressLint("SetTextI18n")
     public void resultEvent(View view) {
         String newNumber = tvResult.getText().toString();
         double result = 0.0;
