@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     // this line is a comment the warning issue, when it fixed, I will remove
-    @SuppressLint({"NonConstantResourceId", "SetTextI18n"})
+    @SuppressLint({"NonConstantResourceId"})
     @Override
     public void onClick(View v) {
         int id = v.getId();
@@ -104,43 +104,43 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.btnNum1:
-                numberEdit.setText(numberEdit.getText() + "1");
+                numberEdit.setText(String.format("%s 1", numberEdit.getText()));
                 break;
 
             case R.id.btnNum2:
-                numberEdit.setText(numberEdit.getText() + "2");
+                numberEdit.setText(String.format("%s 2", numberEdit.getText()));
                 break;
 
             case R.id.btnNum3:
-                numberEdit.setText(numberEdit.getText() + "3");
+                numberEdit.setText(String.format("%s 3", numberEdit.getText()));
                 break;
 
             case R.id.btnNum4:
-                numberEdit.setText(numberEdit.getText() + "4");
+                numberEdit.setText(String.format("%s 4", numberEdit.getText()));
                 break;
 
             case R.id.btnNum5:
-                numberEdit.setText(numberEdit.getText() + "5");
+                numberEdit.setText(String.format("%s 5", numberEdit.getText()));
                 break;
 
             case R.id.btnNum6:
-                numberEdit.setText(numberEdit.getText() + "6");
+                numberEdit.setText(String.format("%s 6", numberEdit.getText()));
                 break;
 
             case R.id.btnNum7:
-                numberEdit.setText(numberEdit.getText() + "7");
+                numberEdit.setText(String.format("%s 7", numberEdit.getText()));
                 break;
 
             case R.id.btnNum8:
-                numberEdit.setText(numberEdit.getText() + "8");
+                numberEdit.setText(String.format("%s 8", numberEdit.getText()));
                 break;
 
             case R.id.btnNum9:
-                numberEdit.setText(numberEdit.getText() + "9");
+                numberEdit.setText(String.format("%s 9", numberEdit.getText()));
                 break;
 
             case R.id.btnDot:
-                numberEdit.setText(numberEdit.getText() + ".");
+                numberEdit.setText(String.format("%s .", numberEdit.getText()));
                 break;
 
             case R.id.btnClear:
