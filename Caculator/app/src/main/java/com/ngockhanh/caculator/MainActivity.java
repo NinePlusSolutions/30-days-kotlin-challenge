@@ -7,18 +7,16 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    TextView tvResult;
-    String op= "+";
-    String oldNumber="";
-    Boolean newOperation = true;
+   private TextView tvResult;
+   private String op= "";
+   private String oldNumber="";
+   private Boolean newOperation = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tvResult = findViewById(R.id.tv_result);
-
     }
-
     public void numberEvent(View view) {
         if(newOperation){
             tvResult.setText("");
