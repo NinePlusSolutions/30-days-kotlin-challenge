@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TabLayout</string>
+    <string name="txt_home">Home</string>
+    <string name="txt_like">Like</string>
+    <string name="txt_store">Store</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
