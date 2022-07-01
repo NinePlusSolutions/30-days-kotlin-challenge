@@ -17,4 +17,5 @@
     <string name="multi">*</string>
     <string name="equal">=</string>
     <string name="clear">CLEAR</string>
+    <string name="errorSyntax">Error Syntax</string>
 </resources>

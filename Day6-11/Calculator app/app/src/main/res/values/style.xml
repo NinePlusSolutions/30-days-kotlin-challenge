@@ -1,0 +1,75 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="guideLineHorizontal" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="guideLineVertical">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="btnStyle">
+        <item name="android:layout_width">@dimen/_55sdp</item>
+        <item name="android:layout_height">@dimen/_62sdp</item>
+        <item name="android:textSize">@dimen/_28ssp</item>
+        <item name="cornerRadius">@dimen/_40sdp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="btnVertical040">
+        <item name="android:layout_width">@dimen/_55sdp</item>
+        <item name="android:layout_height">@dimen/_62sdp</item>
+        <item name="android:textSize">@dimen/_28ssp</item>
+        <item name="cornerRadius">@dimen/_40sdp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="layout_constraintStart_toStartOf">@id/guideLineVertical0.40</item>
+        <item name="layout_constraintEnd_toEndOf">@id/guideLineVertical0.40</item>
+    </style>
+    <style name="btnVertical065">
+        <item name="android:layout_width">@dimen/_55sdp</item>
+        <item name="android:layout_height">@dimen/_62sdp</item>
+        <item name="android:textSize">@dimen/_28ssp</item>
+        <item name="cornerRadius">@dimen/_40sdp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="layout_constraintStart_toStartOf">@id/guideLineVertical0.65</item>
+        <item name="layout_constraintEnd_toEndOf">@id/guideLineVertical0.65</item>
+    </style>
+    <style name="btnVertical090">
+        <item name="android:layout_width">@dimen/_55sdp</item>
+        <item name="android:layout_height">@dimen/_62sdp</item>
+        <item name="android:textSize">@dimen/_28ssp</item>
+        <item name="cornerRadius">@dimen/_40sdp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="layout_constraintStart_toStartOf">@id/guideLineVertical0.90</item>
+        <item name="layout_constraintEnd_toEndOf">@id/guideLineVertical0.90</item>
+    </style>
+    <style name="btnHorizontal045">
+        <item name="layout_constraintStart_toStartOf">@id/guideLineHorizontal0.45</item>
+        <item name="layout_constraintEnd_toEndOf">@id/guideLineHorizontal0.45</item>
+    </style>
+    <style name="btnHorizontal057">
+        <item name="layout_constraintStart_toStartOf">@id/guideLineHorizontal0.57</item>
+        <item name="layout_constraintEnd_toEndOf">@id/guideLineHorizontal0.57</item>
+    </style>
+    <style name="btnHorizontal069">
+        <item name="layout_constraintStart_toStartOf">@id/guideLineHorizontal0.69</item>
+        <item name="layout_constraintEnd_toEndOf">@id/guideLineHorizontal0.69</item>
+    </style>
+    <style name="btnHorizontal081">
+        <item name="layout_constraintStart_toStartOf">@id/guideLineHorizontal0.81</item>
+        <item name="layout_constraintEnd_toEndOf">@id/guideLineHorizontal0.81</item>
+    </style>
+    <style name="btnHorizontal093">
+        <item name="layout_constraintStart_toStartOf">@id/guideLineHorizontal0.93</item>
+        <item name="layout_constraintEnd_toEndOf">@id/guideLineHorizontal0.93</item>
+    </style>
+</resources>
+
+
+<!--<item name="android:layout_width">@dimen/_55sdp</item>-->
+<!--<item name="android:layout_height">@dimen/_62sdp</item>-->
+<!--<item name="android:textSize">@dimen/_28ssp</item>-->
+<!--<item name="android:buttonCornerRadius">@dimen/_40sdp</item>-->
+<!--<item name="layout_constraintStart_toStartOf">parent</item>-->
+<!--<item name="layout_constraintEnd_toEndOf">parent</item>-->
+<!--<item name="layout_constraintTop_toTopOf">@+id/guideLineHorizontal0.45</item>-->

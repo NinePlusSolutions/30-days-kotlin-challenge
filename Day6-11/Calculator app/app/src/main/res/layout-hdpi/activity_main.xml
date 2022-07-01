@@ -8,7 +8,7 @@
 
 
     <Button
-        android:id="@+id/btn_1"
+        android:id="@+id/btnNum1"
         android:layout_width="@dimen/_55sdp"
         android:layout_height="@dimen/_62sdp"
         app:cornerRadius="@dimen/_40sdp"
@@ -24,7 +24,7 @@
         />
 
     <Button
-        android:id="@+id/btn_2"
+        android:id="@+id/btnNum2"
         android:layout_width="@dimen/_55sdp"
         android:layout_height="@dimen/_62sdp"
         app:cornerRadius="@dimen/_40sdp"
@@ -39,7 +39,7 @@
         app:layout_constraintVertical_bias="0.817"/>
 
     <Button
-        android:id="@+id/btn_3"
+        android:id="@+id/btnNum3"
         android:layout_width="@dimen/_55sdp"
         android:layout_height="@dimen/_62sdp"
         app:cornerRadius="@dimen/_40sdp"
@@ -54,7 +54,7 @@
         app:layout_constraintVertical_bias="0.817"/>
 
     <Button
-        android:id="@+id/btn_4"
+        android:id="@+id/btnNum4"
         android:layout_width="@dimen/_55sdp"
         android:layout_height="@dimen/_62sdp"
         app:cornerRadius="@dimen/_40sdp"
@@ -69,7 +69,7 @@
         app:layout_constraintVertical_bias="0.677"/>
 
     <Button
-        android:id="@+id/btn_5"
+        android:id="@+id/btnNum5"
         android:layout_width="@dimen/_55sdp"
         android:layout_height="@dimen/_62sdp"
         app:cornerRadius="@dimen/_40sdp"
@@ -84,7 +84,7 @@
         app:layout_constraintVertical_bias="0.677"/>
 
     <Button
-        android:id="@+id/btn_6"
+        android:id="@+id/btnNum6"
         android:layout_width="@dimen/_55sdp"
         android:layout_height="@dimen/_62sdp"
         app:cornerRadius="@dimen/_40sdp"
@@ -99,7 +99,7 @@
         app:layout_constraintVertical_bias="0.677"/>
 
     <Button
-        android:id="@+id/btn_7"
+        android:id="@+id/btnNum7"
         android:layout_width="@dimen/_55sdp"
         android:layout_height="@dimen/_62sdp"
         app:cornerRadius="@dimen/_40sdp"
@@ -114,7 +114,7 @@
         app:layout_constraintVertical_bias="0.541"/>
 
     <Button
-        android:id="@+id/btn_8"
+        android:id="@+id/btnNum8"
         android:layout_width="@dimen/_55sdp"
         android:layout_height="@dimen/_62sdp"
         app:cornerRadius="@dimen/_40sdp"
@@ -129,7 +129,7 @@
         app:layout_constraintVertical_bias="0.541"/>
 
     <Button
-        android:id="@+id/btn_9"
+        android:id="@+id/btnNum9"
         android:layout_width="@dimen/_55sdp"
         android:layout_height="@dimen/_62sdp"
         app:cornerRadius="@dimen/_40sdp"
@@ -144,7 +144,7 @@
         app:layout_constraintVertical_bias="0.541"/>
 
     <Button
-        android:id="@+id/btn_0"
+        android:id="@+id/btnNum0"
         android:layout_width="@dimen/_140sdp"
         android:layout_height="@dimen/_62sdp"
         android:paddingRight="95sp"
@@ -159,7 +159,7 @@
         app:layout_constraintVertical_bias="0.957"/>
 
     <Button
-        android:id="@+id/btn_equal"
+        android:id="@+id/btnEqual"
         android:layout_width="@dimen/_55sdp"
         android:layout_height="@dimen/_62sdp"
         app:cornerRadius="@dimen/_40sdp"
@@ -175,7 +175,7 @@
         app:backgroundTint="@android:color/holo_orange_dark" />
 
     <Button
-        android:id="@+id/btn_multi"
+        android:id="@+id/btnMulti"
         android:layout_width="@dimen/_55sdp"
         android:layout_height="@dimen/_62sdp"
         app:cornerRadius="@dimen/_40sdp"
@@ -191,7 +191,7 @@
         app:backgroundTint="@android:color/holo_orange_light" />
 
     <Button
-        android:id="@+id/btn_divide"
+        android:id="@+id/btnDivide"
         android:layout_width="@dimen/_55sdp"
         android:layout_height="@dimen/_62sdp"
         app:cornerRadius="@dimen/_40sdp"
@@ -207,7 +207,7 @@
         app:backgroundTint="@android:color/holo_orange_light" />
 
     <Button
-        android:id="@+id/btn_add"
+        android:id="@+id/btnAdd"
         android:layout_width="@dimen/_55sdp"
         android:layout_height="@dimen/_62sdp"
         app:cornerRadius="@dimen/_40sdp"
@@ -223,7 +223,7 @@
         app:backgroundTint="@android:color/holo_orange_light" />
 
     <Button
-        android:id="@+id/btn_sub"
+        android:id="@+id/btnSub"
         android:layout_width="@dimen/_55sdp"
         android:layout_height="@dimen/_62sdp"
         app:cornerRadius="@dimen/_40sdp"
@@ -239,7 +239,7 @@
         app:backgroundTint="@android:color/holo_orange_light" />
 
     <Button
-        android:id="@+id/btn_clear"
+        android:id="@+id/btnClear"
         android:layout_width="@dimen/_220sdp"
         android:layout_height="@dimen/_62sdp"
         app:cornerRadius="@dimen/_40sdp"
@@ -255,7 +255,7 @@
         />
 
     <Button
-        android:id="@+id/btn_dot"
+        android:id="@+id/btnDot"
         android:layout_width="@dimen/_55sdp"
         android:layout_height="@dimen/_62sdp"
         app:cornerRadius="@dimen/_40sdp"
@@ -270,7 +270,7 @@
         app:layout_constraintVertical_bias="0.958"/>
 
     <TextView
-        android:id="@+id/tv_input"
+        android:id="@+id/tvInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
@@ -283,7 +283,7 @@
         app:layout_constraintVertical_bias="0.252" />
 
     <TextView
-        android:id="@+id/tv_output"
+        android:id="@+id/tvOutput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"

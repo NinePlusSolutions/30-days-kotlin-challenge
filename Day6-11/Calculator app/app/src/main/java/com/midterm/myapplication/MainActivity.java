@@ -1,51 +1,29 @@
 package com.midterm.myapplication;
 
+import static com.midterm.myapplication.Constants.*;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, View.OnLongClickListener {
 
-    private Button btn_1;
-    private Button btn_2;
-    private Button btn_3;
-    private Button btn_4;
-    private Button btn_5;
-    private Button btn_6;
-    private Button btn_7;
-    private Button btn_8;
-    private Button btn_9;
-    private Button btn_0;
-    private Button btn_equal;
-    private Button btn_multi;
-    private Button btn_divide;
-    private Button btn_add;
-    private Button btn_sub;
-    private Button btn_clear;
-    private Button btn_dot;
+    private Button btnNum1,btnNum2,btnNum3,btnNum4,btnNum5,btnNum6,btnNum7,btnNum8,
+            btnNum9,btnNum0,btnEqual,btnMulti,btnDivide,btnAdd,btnSub,btnClear,btnDot;
 
-    private TextView tv_input;
-    private TextView tv_output;
+    private TextView tvInput,tvOutput;
 
-
-//     không thể thay đổi giá trị của biến final (nó sẽ là hằng số).
     private final char ADDITION = '+';
     private final char SUBTRACTION = '-';
     private final char MULTIPLICATION = '*';
     private final char DIVISION = '÷';
     private final char EQU = '=';
     private char ACTION;
-
-
-    // val 1 : old value
-    // val 2 : input value
-    private double val1 = Double.NaN;
-    private double val2;
+    private double valueInput = Double.NaN;
+    private double valueOutput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,45 +33,44 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     // ------------------------- Set up onclick button ---------------------------
-    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         int id = v.getId();
         switch(id) {
-            case R.id.btn_0:
-                tv_input.setText(tv_input.getText().toString() + "0");
+            case R.id.btnNum:
+                tvInput.setText(String.format("%s0", tvInput.getText()));
                 break;
-            case R.id.btn_1:
-                tv_input.setText(tv_input.getText().toString() + "1");
+            case R.id.btnNum1:
+                tvInput.setText(String.format("%s1", tvInput.getText()));
                 break;
-            case R.id.btn_2:
-                tv_input.setText(tv_input.getText().toString() + "2");
+            case R.id.btnNum2:
+                tvInput.setText(String.format("%s2", tvInput.getText()));
                 break;
-            case R.id.btn_3:
-                tv_input.setText(tv_input.getText().toString() + "3");
+            case R.id.btnNum3:
+                tvInput.setText(String.format("%s3", tvInput.getText()));
                 break;
-            case R.id.btn_4:
-                tv_input.setText(tv_input.getText().toString() + "4");
+            case R.id.btnNum4:
+                tvInput.setText(String.format("%s4", tvInput.getText()));
                 break;
-            case R.id.btn_5:
-                tv_input.setText(tv_input.getText().toString() + "5");
+            case R.id.btnNum5:
+                tvInput.setText(String.format("%s5", tvInput.getText()));
                 break;
-            case R.id.btn_6:
-                tv_input.setText(tv_input.getText().toString() + "6");
+            case R.id.btnNum6:
+                tvInput.setText(String.format("%s6", tvInput.getText()));
                 break;
-            case R.id.btn_7:
-                tv_input.setText(tv_input.getText().toString() + "7");
+            case R.id.btnNum7:
+                tvInput.setText(String.format("%s7", tvInput.getText()));
                 break;
-            case R.id.btn_8:
-                tv_input.setText(tv_input.getText().toString() + "8");
+            case R.id.btnNum8:
+                tvInput.setText(String.format("%s8", tvInput.getText()));
                 break;
-            case R.id.btn_9:
-                tv_input.setText(tv_input.getText().toString() + "9");
+            case R.id.btnNum9:
+                tvInput.setText(String.format("%s9", tvInput.getText()));
                 break;
-            case R.id.btn_dot:
-                tv_input.setText(tv_input.getText().toString() + ".");
+            case R.id.btnDot:
+                tvInput.setText(String.format("%s.", tvInput.getText()));
                 break;
-            case R.id.btn_add:
+            case R.id.btnAdd:
                 try {
                     if (isInput()) {
                         addSymbol("+");
@@ -101,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 } catch (Exception e) {errorHandle();}
                 break;
-            case R.id.btn_sub:
+            case R.id.btnSub:
                 try {
                     if (isInput()){
                         addSymbol("-");
@@ -109,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 } catch (Exception e) {errorHandle();}
                 break;
-            case R.id.btn_multi:
+            case R.id.btnMulti:
                 try {
                     if (isInput()) {
                         addSymbol("*");
@@ -117,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 }   catch (Exception e) {errorHandle();}
                 break;
-            case R.id.btn_divide:
+            case R.id.btnDivide:
                 try {
                     if (isInput()) {
                         addSymbol("÷");
@@ -125,31 +102,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 } catch (Exception e) {errorHandle();}
                 break;
-            case R.id.btn_equal:
+            case R.id.btnEqual:
                 try {
                     if (isInput()) {
-                        if (tv_input.getText().length() > 0) {
-                            operation();
+                        if (tvInput.getText().length() > 0) {
+                            doCalculator();
                         }
-                        if (!ifReallyDecimal()) {
-                            tv_output.setText(/*t2.getText().toString() + String.valueOf(val2) + "=" + */String.valueOf(val1));
+                        if (!isDemical()) {
+                            tvOutput.setText(/*t2.getText().toString() + String.valueOf(val2) + "=" + */String.valueOf(valueInput));
                         } else {
-                            tv_output.setText(/*t2.getText().toString() + String.valueOf(val2) + "=" + */String.valueOf((int) val1));
+                            tvOutput.setText(/*t2.getText().toString() + String.valueOf(val2) + "=" + */String.valueOf((int) valueInput));
                         }
-                        tv_input.setText(null);
+                        tvInput.setText(null);
                         ACTION = EQU;
                     }
                 } catch (Exception e) {errorHandle();}
                 break;
-            case R.id.btn_clear:
-                if (tv_input.getText().length() > 0) {
-                    CharSequence name = tv_input.getText().toString();
-                    tv_input.setText(name.subSequence(0, name.length() - 1));
+            case R.id.btnClear:
+                if (tvInput.getText().length() > 0) {
+                    CharSequence name = tvInput.getText().toString();
+                    tvInput.setText(name.subSequence(0, name.length() - 1));
                 } else {
-                    val1 = Double.NaN;
-                    val2 = Double.NaN;
-                    tv_input.setText("");
-                    tv_output.setText("");
+                    valueInput = Double.NaN;
+                    valueOutput = Double.NaN;
+                    tvInput.setText("");
+                    tvOutput.setText("");
                 }
                 break;
         }
@@ -159,11 +136,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public boolean onLongClick(View v) {
         int id = v.getId();
         switch(id) {
-            case R.id.btn_clear:
-                val1 = Double.NaN;
-                val2 = Double.NaN;
-                tv_input.setText("");
-                tv_output.setText("");
+            case R.id.btnClear:
+                valueInput = Double.NaN;
+                valueOutput = Double.NaN;
+                tvInput.setText("");
+                tvOutput.setText("");
                 return true;
         }
         return false;
@@ -171,104 +148,100 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     // ------------------------- View Setup -------------------------------
     private void viewSetup () {
-        btn_1 = findViewById(R.id.btn_1);
-        btn_2 = findViewById(R.id.btn_2);
-        btn_3 = findViewById(R.id.btn_3);
-        btn_4 = findViewById(R.id.btn_4);
-        btn_5 = findViewById(R.id.btn_5);
-        btn_6 = findViewById(R.id.btn_6);
-        btn_7 = findViewById(R.id.btn_7);
-        btn_8 = findViewById(R.id.btn_8);
-        btn_9 = findViewById(R.id.btn_9);
-        btn_0 = findViewById(R.id.btn_0);
-        btn_dot = findViewById(R.id.btn_dot);
-        tv_output = findViewById(R.id.tv_output);
-        tv_input = findViewById(R.id.tv_input);
+        btnNum1 = findViewById(R.id.btnNum1);
+        btnNum2 = findViewById(R.id.btnNum2);
+        btnNum3 = findViewById(R.id.btnNum3);
+        btnNum4 = findViewById(R.id.btnNum4);
+        btnNum5 = findViewById(R.id.btnNum5);
+        btnNum6 = findViewById(R.id.btnNum6);
+        btnNum7 = findViewById(R.id.btnNum7);
+        btnNum8 = findViewById(R.id.btnNum8);
+        btnNum9 = findViewById(R.id.btnNum9);
+        btnNum0 = findViewById(R.id.btnNum0);
+        btnDot = findViewById(R.id.btnDot);
+        tvOutput = findViewById(R.id.tvOutput);
+        tvInput = findViewById(R.id.tvInput);
 
-        btn_equal = findViewById(R.id.btn_equal);
-        btn_multi = findViewById(R.id.btn_multi);
-        btn_divide = findViewById(R.id.btn_divide);
-        btn_add = findViewById(R.id.btn_add);
-        btn_sub = findViewById(R.id.btn_sub);
-        btn_clear = findViewById(R.id.btn_clear);
+        btnEqual = findViewById(R.id.btnEqual);
+        btnMulti = findViewById(R.id.btnMulti);
+        btnDivide = findViewById(R.id.btnDivide);
+        btnAdd = findViewById(R.id.btnAdd);
+        btnSub = findViewById(R.id.btnSub);
+        btnClear = findViewById(R.id.btnClear);
 
-        btn_1.setOnClickListener(this);
-        btn_2.setOnClickListener(this);
-        btn_3.setOnClickListener(this);
-        btn_4.setOnClickListener(this);
-        btn_5.setOnClickListener(this);
-        btn_6.setOnClickListener(this);
-        btn_7.setOnClickListener(this);
-        btn_8.setOnClickListener(this);
-        btn_9.setOnClickListener(this);
-        btn_0.setOnClickListener(this);
-        btn_dot.setOnClickListener(this);
-        btn_add.setOnClickListener(this);
-        btn_sub.setOnClickListener(this);
-        btn_multi.setOnClickListener(this);
-        btn_divide.setOnClickListener(this);
-        btn_equal.setOnClickListener(this);
-        btn_clear.setOnClickListener(this);
-        btn_clear.setOnLongClickListener(this);
+        btnNum1.setOnClickListener(this);
+        btnNum2.setOnClickListener(this);
+        btnNum3.setOnClickListener(this);
+        btnNum4.setOnClickListener(this);
+        btnNum5.setOnClickListener(this);
+        btnNum6.setOnClickListener(this);
+        btnNum7.setOnClickListener(this);
+        btnNum8.setOnClickListener(this);
+        btnNum9.setOnClickListener(this);
+        btnNum0.setOnClickListener(this);
+        btnDot.setOnClickListener(this);
+        btnAdd.setOnClickListener(this);
+        btnSub.setOnClickListener(this);
+        btnMulti.setOnClickListener(this);
+        btnDivide.setOnClickListener(this);
+        btnEqual.setOnClickListener(this);
+        btnClear.setOnClickListener(this);
+        btnClear.setOnLongClickListener(this);
     }
 
     // ------------------------- Features Function -------------------------------
-    // kiem tra so thap phan
-    private boolean ifReallyDecimal() {
-        return val1 == (int) val1;
+    // check is decimal or not
+    private boolean isDemical() {
+        return valueInput == (int) valueInput;
     }
 
-    // kiem tra nhap so hay chua
+    // Check is Input or not
     private boolean isInput() {
-        if ( !Double.isNaN(val1) || tv_input.getText().length() > 0 ){
-            return true;
-        }
-        return false;
+        return !Double.isNaN(valueInput) || tvInput.getText().length() > 0;
     }
 
-    // them dau
+    // Add Symbol
     private void addSymbol(String symbol) {
-        if (tv_input.getText().length() > 0) {
-            operation();
+        if (tvInput.getText().length() > 0) {
+            doCalculator();
         }
-        if (ifReallyDecimal()) {
-            tv_output.setText((int) val1 + " " + symbol);
+        if (isDemical()) {
+            tvOutput.setText(String.format((int) valueInput + "%s ", symbol));
         } else {
-            tv_output.setText(val1 + " " + symbol);
+            tvOutput.setText(String.format(valueInput + "%s ", symbol));
         }
-        tv_input.setText(null);
+        tvInput.setText(null);
     }
 
-    // toan tu
-    private void operation() {
-        if (!Double.isNaN(val1)) { // kiem tra val1 null hay khong
-            val2 = Double.parseDouble(tv_input.getText().toString()); // gan val 2 = text_input
+    // Do Calculator
+    private void doCalculator() {
+        if (!Double.isNaN(valueInput)) {
+            valueOutput = Double.parseDouble(tvInput.getText().toString()); // val 2 = text_input
             switch (ACTION) {
                 case ADDITION:
-                    val1 = val1 + val2;
+                    valueInput = valueInput + valueOutput;
                     break;
                 case SUBTRACTION:
-                    val1 = val1 - val2;
+                    valueInput = valueInput - valueOutput;
                     break;
                 case MULTIPLICATION:
-                    val1 = val1 * val2;
+                    valueInput = valueInput * valueOutput;
                     break;
                 case DIVISION:
-                    val1 = val1 / val2;
+                    valueInput = valueInput / valueOutput;
                     break;
                 case EQU:
                     break;
             }
         } else {
-            // null thi gan bang gia tri input
-            val1 = Double.parseDouble(tv_input.getText().toString());
+            valueInput = Double.parseDouble(tvInput.getText().toString());
         }
-        val1 = Math.round(val1*100.0)/100.0;
+        valueInput = Math.round(valueInput *100.0)/100.0;
     }
 
     //  Error Handle
     private void errorHandle() {
-        tv_output.setText("Error Syntax");
-        tv_input.setText("");
+        tvOutput.setText(R.string.errorSyntax);
+        tvInput.setText("");
     }
 }
