@@ -4,9 +4,9 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatTextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -36,60 +36,60 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnEqual = findViewById(R.id.btnEqual);
         numberEdit = findViewById(R.id.edt);
 
+
         this.setListener();
 
         btnAdd.setOnClickListener(v -> {
 
             if (numberEdit == null) {
 
-                numberEdit.setText("");
+                numberEdit.setText(BLANK);
             } else {
-                valueOne = Float.parseFloat(numberEdit.getText() + "");
+                valueOne = Float.parseFloat(numberEdit.getText() + BLANK);
                 isAddition = true;
                 numberEdit.setText(null);
             }
         });
 
         btnMinus.setOnClickListener(v -> {
-            valueOne = Float.parseFloat(numberEdit.getText() + "");
+            valueOne = Float.parseFloat(numberEdit.getText() + BLANK);
             isMinus = true;
-            numberEdit.setText(null);
+            numberEdit.setText(BLANK);
         });
 
         btnMul.setOnClickListener(v -> {
-            valueOne = Float.parseFloat(numberEdit.getText() + "");
+            valueOne = Float.parseFloat(numberEdit.getText() + BLANK);
             isMultiplication = true;
-            numberEdit.setText(null);
+            numberEdit.setText(BLANK);
         });
 
         btnDivide.setOnClickListener(v -> {
-            valueOne = Float.parseFloat(numberEdit.getText() + "");
+            valueOne = Float.parseFloat(numberEdit.getText() + BLANK);
             isDivision = true;
-            numberEdit.setText(null);
+            numberEdit.setText(BLANK);
         });
 
         btnEqual.setOnClickListener(v -> {
-            valueTwo = Float.parseFloat(numberEdit.getText() + "");
+            valueTwo = Float.parseFloat(numberEdit.getText() + BLANK);
 
             if (isAddition) {
-                numberEdit.setText(valueOne + valueTwo + "");
+                numberEdit.setText(valueOne + valueTwo + BLANK);
                 isAddition = false;
             }
 
             if (isMinus) {
-                numberEdit.setText(valueOne - valueTwo + "");
+                numberEdit.setText(valueOne - valueTwo + BLANK);
                 isMinus = false;
             }
 
             if (isMultiplication) {
-                numberEdit.setText(valueOne * valueTwo + "");
+                numberEdit.setText(valueOne * valueTwo + BLANK);
                 isMultiplication = false;
             }
 
-            if (isDivision) {
-                numberEdit.setText(valueOne / valueTwo + "");
-                isDivision = false;
-            }
+            numberEdit.setText(valueOne / valueTwo + BLANK);
+            isDivision = false;
+
         });
     }
 
@@ -100,51 +100,51 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int id = v.getId();
         switch (id) {
             case R.id.btnNum0:
-                numberEdit.setText(String.format("%s 0", numberEdit.getText()));
+                numberEdit.setText(String.format("%s0", numberEdit.getText()));
                 break;
 
             case R.id.btnNum1:
-                numberEdit.setText(String.format("%s 1", numberEdit.getText()));
+                numberEdit.setText(String.format("%s1", numberEdit.getText()));
                 break;
 
             case R.id.btnNum2:
-                numberEdit.setText(String.format("%s 2", numberEdit.getText()));
+                numberEdit.setText(String.format("%s2", numberEdit.getText()));
                 break;
 
             case R.id.btnNum3:
-                numberEdit.setText(String.format("%s 3", numberEdit.getText()));
+                numberEdit.setText(String.format("%s3", numberEdit.getText()));
                 break;
 
             case R.id.btnNum4:
-                numberEdit.setText(String.format("%s 4", numberEdit.getText()));
+                numberEdit.setText(String.format("%s4", numberEdit.getText()));
                 break;
 
             case R.id.btnNum5:
-                numberEdit.setText(String.format("%s 5", numberEdit.getText()));
+                numberEdit.setText(String.format("%s5", numberEdit.getText()));
                 break;
 
             case R.id.btnNum6:
-                numberEdit.setText(String.format("%s 6", numberEdit.getText()));
+                numberEdit.setText(String.format("%s6", numberEdit.getText()));
                 break;
 
             case R.id.btnNum7:
-                numberEdit.setText(String.format("%s 7", numberEdit.getText()));
+                numberEdit.setText(String.format("%s7", numberEdit.getText()));
                 break;
 
             case R.id.btnNum8:
-                numberEdit.setText(String.format("%s 8", numberEdit.getText()));
+                numberEdit.setText(String.format("%s8", numberEdit.getText()));
                 break;
 
             case R.id.btnNum9:
-                numberEdit.setText(String.format("%s 9", numberEdit.getText()));
+                numberEdit.setText(String.format("%s9", numberEdit.getText()));
                 break;
 
             case R.id.btnDot:
-                numberEdit.setText(String.format("%s .", numberEdit.getText()));
+                numberEdit.setText(String.format("%s.", numberEdit.getText()));
                 break;
 
             case R.id.btnClear:
-                numberEdit.setText("");
+                numberEdit.setText(BLANK);
                 break;
 
             default:
@@ -155,11 +155,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnNum0, btnNum1, btnNum2, btnNum3, btnNum4, btnNum5, btnNum6, btnNum7,
             btnNum8, btnNum9, btnAdd, btnMinus, btnDivide, btnMul, btnDot, btnClear, btnEqual;
 
-    private EditText numberEdit;
+    private AppCompatTextView numberEdit;
 
     private float valueOne, valueTwo;
 
     private boolean isAddition, isMinus, isMultiplication, isDivision;
+
+    private final String BLANK = "";
 
 
     private void setListener() {

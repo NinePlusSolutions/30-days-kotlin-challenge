@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.calculator"
-        minSdk 21
+        minSdk 26
         targetSdk 32
         versionCode 1
         versionName "1.0"
@@ -28,6 +28,7 @@ android {
 }
 
 dependencies {
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
     implementation 'com.android.support:appcompat-v7:27.1.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
