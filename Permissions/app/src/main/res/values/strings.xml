@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Permissions</string>
+    <string name="request_permission">Request Permission</string>
+    <string name="open_setting_permission">Open Setting Permission</string>
+</resources>
