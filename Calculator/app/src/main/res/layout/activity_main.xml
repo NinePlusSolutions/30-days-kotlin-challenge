@@ -73,6 +73,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnNum7"
         style="@style/buttonNumber"
+        android:background="@drawable/shape"
         android:text="@string/btnNum7"
         app:layout_constraintBottom_toBottomOf="@id/topBodyGuideline"
         app:layout_constraintEnd_toEndOf="@id/leftGuideline"
