@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ResearchAboutRecycleView</string>
+    <string name="cPlusPlus">C++</string>
+    <string name="desOfC">Basic language</string>
 </resources>
