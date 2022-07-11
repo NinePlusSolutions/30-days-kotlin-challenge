@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Notification</string>
+    <string name="button_1">Send on Channel 1</string>
+    <string name="button_2">Send On Channel 2</string>
+    <string name="message">Message</string>
+    <string name="title">Title</string>
+    <string name="show_notification">Show Notification</string>
+</resources>
