@@ -13,6 +13,7 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,11 +27,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun scheduleNotification() {
-        val intent  = Intent(applicationContext, Notification::class.java)
+        val intent = Intent(applicationContext, Notification::class.java)
         val title = binding.titleET.text.toString()
         val message = binding.messageET.text.toString()
-        intent.putExtra(titleExtra,title)
-        intent.putExtra(messageExtra,message)
+        intent.putExtra(titleExtra, title)
+        intent.putExtra(messageExtra, message)
 
         val pendingIntent = PendingIntent.getBroadcast(
             applicationContext,
@@ -39,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
 
         )
-        val alarmManager  = getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val time = getTime()
         alarmManager.setExactAndAllowWhileIdle(
             AlarmManager.RTC_WAKEUP,
@@ -62,7 +63,7 @@ class MainActivity : AppCompatActivity() {
                         "\nmessage: " + message +
                         "\nAt: " + dateFormat.format(date) + " " + timeFormat.format(date)
             )
-            .setPositiveButton("oke"){_,_->}
+            .setPositiveButton("oke") { _, _ -> }
             .show()
 
     }
@@ -75,7 +76,7 @@ class MainActivity : AppCompatActivity() {
         val year = binding.datePicker.year
 
         val calendar = Calendar.getInstance()
-        calendar.set(year,month,day,hour,minute)
+        calendar.set(year, month, day, hour, minute)
         return calendar.timeInMillis
 
     }
@@ -83,11 +84,11 @@ class MainActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.O)
     private fun createNotificationChannel() {
         val name = "Notification Channel"
-        val desc ="A Description of the channel "
+        val desc = "A Description of the channel "
         val importance = NotificationManager.IMPORTANCE_DEFAULT
         val channel = NotificationChannel(channelID, name, importance)
         channel.description = desc
-        val notificationManager =getSystemService(NOTIFICATION_SERVICE) as NotificationManager
+        val notificationManager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
         notificationManager.createNotificationChannel(channel)
     }
 }
