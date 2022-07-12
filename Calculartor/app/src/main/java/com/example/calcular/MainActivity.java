@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private double i1 , i2 ;
     private TextView edtTextInput;
-    private boolean isAdd, isSub, isMultiply, isDivide, isRemainder;
+    private boolean isAdd, isSub, isMultiply, isDivide;
     private Button btnNum0,btnNum1,btnNum2,btnNum3,btnNum4,btnNum5,btnNum6,btnNum7,btnNum8,btnNum9,btnAdd,btnSub,btnMul,btnDiv,btnEqu,btnDel,btnDot, btnRemainder;
 
     @Override
