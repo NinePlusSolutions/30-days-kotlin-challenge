@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="tab_rv">Tab 1</string>
+    <string name="tab_service">Tab 2</string>
+    <string name="request_permission">Request Permission</string>
+    <string name="open_setting_permission">Open Setting Permission</string>
+    <string name="channel_name">Test Channel 1</string>
+    <string name="channel_description">This is a test channel at level a high level, where lights, sound, and vibration are active.</string>
+    <string name="text_service">Foreground service example, press the button to start.</string>
+    <string name="text_start_service">Start Example</string>
+</resources>
