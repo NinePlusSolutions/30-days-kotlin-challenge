@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">LiveData</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="number_of_medal_label">5</string>
+    <string name="number_of_gold_label">2</string>
+    <string name="number_of_silver_label">1</string>
+    <string name="number_of_bronze_label">5</string>
+    <string name="gold_label">Vàng</string>
+    <string name="minus_button_label">-</string>
+    <string name="plus_button_label">+</string>
+    <string name="silver_label">Bạc</string>
+    <string name="bronze_label">Đồng</string>
+</resources>
