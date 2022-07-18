@@ -23,10 +23,6 @@ public class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public Adapter(List<Comment> mCommentList) {
         this.mCommentList = mCommentList;
     }
-    public void setData(List<Comment> mUserList) {
-        this.mCommentList = mUserList;
-        notifyDataSetChanged();
-    }
 
     @NonNull
     @Override
