@@ -1,27 +1,32 @@
 package com.example.researchaboutrecycleview;
 
 public class ItemDesignModel {
-    private int cardView1;
-    private String tv1;
-    private String tv2;
+    private String textViewUsername;
+    private String textViewLocation;
+    private String textViewTime;
+    private String textViewContent;
 
 
-    public ItemDesignModel(int cardView1, String tv1, String tv2) {
-        this.cardView1 = cardView1;
-        this.tv1 = tv1;
-        this.tv2 = tv2;
+    public ItemDesignModel(String textViewUsername, String textViewLocation, String textViewTime, String textViewContent) {
+        this.textViewUsername = textViewUsername;
+        this.textViewLocation = textViewLocation;
+        this.textViewTime = textViewTime;
+        this.textViewContent = textViewContent;
     }
 
-    public int getCardView1() {
-        return cardView1;
+    public String getTextViewUsername() {
+        return textViewUsername;
     }
 
-    public String getTv1() {
-        return tv1;
+    public String getTextViewLocation() {
+        return textViewLocation;
     }
 
-    public String getTv2() {
-        return tv2;
+    public String getTextViewTime() {
+        return textViewTime;
     }
 
+    public String getTextViewContent() {
+        return textViewContent;
+    }
 }

@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Intern_9+/30-days-kotlin-challenge/Android_Advance_1/Room/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Intern_9+/30-days-kotlin-challenge/Android_Advance_1/Room/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Intern_9+/30-days-kotlin-challenge/Android_Advance_1/Room/app/src/main/res/layout/fragment_add.xml" value="0.225" />
+        <entry key="..\:/Intern_9+/30-days-kotlin-challenge/Android_Advance_1/Room/app/src/main/res/layout/fragment_list.xml" value="0.225" />
         <entry key="..\:/Intern_9+/30-days-kotlin-challenge/Android_Advance_1/Room/app/src/main/res/layout/item_user.xml" value="0.225" />
       </map>
     </option>
