@@ -17,7 +17,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_menu"
         app:tint="@color/white"
-        android:contentDescription="Menu" />
+        android:contentDescription="Menu"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -50,5 +51,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
