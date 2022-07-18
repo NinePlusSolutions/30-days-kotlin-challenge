@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Tweet</string>
+    <string name="avatar">avatar</string>
+    <string name="user_name">awan</string>
+    <string name="user_tagname">\@NewDelhi, India</string>
+    <string name="chat">chat</string>
+    <string name="time">1h ago</string>
+    <string name="replace">replace</string>
+    <string name="like">like</string>
+    <string name="share">share</string>
+    <string name="comment1">Google Developer Expert for Flutter.Passionate #Flutter, #Android Developer, #Entreprenuer #Youtuber</string>
+    <string name="comment2">Lorem Ispum is simply dummy text of the printing and typesetting industry.</string>
+</resources>
