@@ -17,9 +17,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        textViewUsername = arrayOf("JackBenTre", "Tommy", "Thomas", "John", "Soda")
-        textViewLocation = arrayOf("@VietNam", "California", "Japan", "China", "ThaiLand")
-        textViewTime = arrayOf("5h ago", "15m ago", "6d ago", "Just a few sec")
+        textViewUsername = arrayOf("Jack", "Tommy", "Thomas", "John", "Soda")
+        textViewLocation = arrayOf("@VietNam", "@California", "@Japan", "@China", "@ThaiLand")
+        textViewTime = arrayOf("5h ago", "15m ago", "6d ago", "Just a few sec", "4 mins ago")
 
         newRecyclerView = findViewById(R.id.recyclerView)
         newRecyclerView.layoutManager = LinearLayoutManager(this)

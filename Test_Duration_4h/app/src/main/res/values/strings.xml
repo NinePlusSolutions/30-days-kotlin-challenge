@@ -1,4 +1,5 @@
 <resources>
+    <string name="twitter">Twitter</string>
     <string name="app_name">Test_Duration_4h</string>
     <string name="eric">Eric</string>
     <string name="california">\@California</string>
