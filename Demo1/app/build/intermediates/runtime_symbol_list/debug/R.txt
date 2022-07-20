@@ -1205,11 +1205,11 @@ int color accent_material_dark 0x7f050019
 int color accent_material_light 0x7f05001a
 int color androidx_core_ripple_material_light 0x7f05001b
 int color androidx_core_secondary_text_default_material_light 0x7f05001c
+int color backgr 0x7f05025a
 int color background_floating_material_dark 0x7f05001d
 int color background_floating_material_light 0x7f05001e
 int color background_material_dark 0x7f05001f
 int color background_material_light 0x7f050020
-int color backgroup 0x7f05025b
 int color black 0x7f050021
 int color bright_foreground_disabled_material_dark 0x7f050022
 int color bright_foreground_disabled_material_light 0x7f050023
@@ -4026,15 +4026,12 @@ int string character_counter_overflowed_content_description 0x7f0f0021
 int string character_counter_pattern 0x7f0f0022
 int string chip_text 0x7f0f0023
 int string clear_text_end_icon_content_description 0x7f0f0024
-int string comment 0x7f0f007b
-int string country 0x7f0f007c
 int string error_icon_content_description 0x7f0f0025
 int string exposed_dropdown_menu_content_description 0x7f0f0026
 int string fab_transformation_scrim_behavior 0x7f0f0027
 int string fab_transformation_sheet_behavior 0x7f0f0028
 int string hide_bottom_view_on_scroll_behavior 0x7f0f0029
 int string icon_content_description 0x7f0f002a
-int string image 0x7f0f007d
 int string item_view_role_description 0x7f0f002b
 int string label 0x7f0f002c
 int string m3_ref_typeface_brand_medium 0x7f0f002d
@@ -4108,7 +4105,6 @@ int string mtrl_picker_toggle_to_day_selection 0x7f0f0070
 int string mtrl_picker_toggle_to_text_input_mode 0x7f0f0071
 int string mtrl_picker_toggle_to_year_selection 0x7f0f0072
 int string mtrl_timepicker_confirm 0x7f0f0073
-int string name 0x7f0f007e
 int string password_toggle_content_description 0x7f0f0074
 int string path_password_eye 0x7f0f0075
 int string path_password_eye_mask_strike_through 0x7f0f0076
@@ -4116,7 +4112,6 @@ int string path_password_eye_mask_visible 0x7f0f0077
 int string path_password_strike_through 0x7f0f0078
 int string search_menu_title 0x7f0f0079
 int string status_bar_notification_info_overflow 0x7f0f007a
-int string time 0x7f0f007f
 int style AlertDialog_AppCompat 0x7f100000
 int style AlertDialog_AppCompat_Light 0x7f100001
 int style AndroidThemeColorAccentYellow 0x7f100002

@@ -1,6 +1,6 @@
 R_DEF: Internal format may change without notice
 local
-color backgroup
+color backgr
 color black
 color purple_200
 color purple_500
@@ -42,11 +42,6 @@ layout item_user3
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
-string comment
-string country
-string image
-string name
-string time
 style Theme.Demo1
 xml backup_rules
 xml data_extraction_rules

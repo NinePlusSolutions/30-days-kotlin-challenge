@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
-    <color name="backgroup">#696969</color>
+    <color name="backgr">#696969</color>
     <color name="black">#FF000000</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
@@ -9,11 +9,6 @@
     <color name="teal_700">#F44336</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">Demo</string>
-    <string name="comment">Em rat toi the nhung minh chang hop nhau dau</string>
-    <string name="country">VietNam</string>
-    <string name="image">desc</string>
-    <string name="name">Duong</string>
-    <string name="time">10h</string>
     <style name="Theme.Demo1" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         
         <item name="colorPrimary">@color/purple_500</item>

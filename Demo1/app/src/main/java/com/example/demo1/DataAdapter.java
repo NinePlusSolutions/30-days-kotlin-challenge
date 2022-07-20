@@ -29,7 +29,6 @@ public class DataAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         if (mListData != null && position == mListData.size() - 1 && isLoadingAdd) {
             return TYPE_LOADING;
         }
-
         return TYPE_ITEM;
     }
 
@@ -82,15 +81,16 @@ public class DataAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
         public DataViewHolder(@NonNull View itemView) {
             super(itemView);
-            imgAvatar = itemView.findViewById(R.id.img_avt);
-            imgMessage1 = itemView.findViewById(R.id.img_message);
-            imgFavorite = itemView.findViewById(R.id.img_favorite);
-            imgShare = itemView.findViewById(R.id.img_share);
-            tvName = itemView.findViewById(R.id.tv_name);
-            tvCountry = itemView.findViewById(R.id.tv_country);
-            tvTime = itemView.findViewById(R.id.tv_time);
-            tvComment = itemView.findViewById(R.id.tv_commnet);
+            imgAvatar = itemView.findViewById(R.id.ivAvt);
+            imgMessage1 = itemView.findViewById(R.id.ivMessage);
+            imgFavorite = itemView.findViewById(R.id.ivFavorite);
+            imgShare = itemView.findViewById(R.id.ivShare);
+            tvName = itemView.findViewById(R.id.tvName);
+            tvCountry = itemView.findViewById(R.id.tvCountry);
+            tvTime = itemView.findViewById(R.id.tvTime);
+            tvComment = itemView.findViewById(R.id.tvComment);
         }
+
     }
 
     public static class LoadingViewHolder extends RecyclerView.ViewHolder {

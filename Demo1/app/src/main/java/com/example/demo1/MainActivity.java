@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -23,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.avtivity_main);
-        RecyclerView rcvData = findViewById(R.id.rcv_data);
+        RecyclerView rcvData = findViewById(R.id.rvData);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         rcvData.setLayoutManager(linearLayoutManager);
 
@@ -61,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @SuppressLint("NotifyDataSetChanged")
     private void loadNextPage() {
         new Handler().postDelayed(() -> {
             List<Data> list = getListData();
@@ -82,10 +80,9 @@ public class MainActivity extends AppCompatActivity {
     private List<Data> getListData() {
         List<Data> list = new ArrayList<>();
         for (int i = 1; i < 10; i++) {
-            list.add(new Data(R.drawable.ic_avt_1, "Dong", "VieteNam", "10h", "Lunar New Year Festival often falls between late January and early February; it is among the most important holidays in Vietnam.", R.drawable.ic_message, R.drawable.ic_repeat, R.drawable.ic_favorite, R.drawable.ic_share));
+            list.add(new Data(R.drawable.ic_avt_1, "Doing", "VieteNam", "10h", "Lunar New Year Festival often falls between late January and early February; it is among the most important holidays in Vietnam.", R.drawable.ic_message, R.drawable.ic_repeat, R.drawable.ic_favorite, R.drawable.ic_share));
 
         }
         return list;
     }
-
 }
