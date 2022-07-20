@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Demo</string>
+    <string name="image">desc</string>
+    <string name="name">Duong</string>
+    <string name="country">VietNam</string>
+    <string name="time">10h</string>
+    <string name="comment">Em rat toi the nhung minh chang hop nhau dau</string>
 </resources>
