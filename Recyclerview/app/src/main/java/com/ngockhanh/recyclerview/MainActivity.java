@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(drawable);
 
-        RecyclerView rv_User = findViewById(R.id.rv_user);
+        RecyclerView rv_User = findViewById(R.id.rvUser);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         rv_User.setLayoutManager(linearLayoutManager);
 

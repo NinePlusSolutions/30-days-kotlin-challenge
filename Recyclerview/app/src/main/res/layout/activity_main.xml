@@ -19,7 +19,7 @@
             tools:ignore="RtlHardcoded"
             app:layout_behavior=".animation.FABAnimate"/>
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_user"
+            android:id="@+id/rvUser"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 

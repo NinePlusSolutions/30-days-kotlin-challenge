@@ -73,19 +73,18 @@ public class UserAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
         public UserViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvUserName = itemView.findViewById(R.id.tv_item_user_name);
-            tvUserAddress = itemView.findViewById(R.id.tv_item_user_address);
-            tvUserTime = itemView.findViewById(R.id.tv_item_user_time);
-            tvUserComment = itemView.findViewById(R.id.tv_item_comment_content);
+            tvUserName = itemView.findViewById(R.id.tvName);
+            tvUserAddress = itemView.findViewById(R.id.tvAddress);
+            tvUserTime = itemView.findViewById(R.id.tvTime);
+            tvUserComment = itemView.findViewById(R.id.tvComment);
         }
     }
 
     public static class LoadingViewHolder extends RecyclerView.ViewHolder {
-        private final ProgressBar progressBar;
 
         public LoadingViewHolder(@NonNull View itemView) {
             super(itemView);
-            progressBar = itemView.findViewById(R.id.progressBar);
+            ProgressBar progressBar = itemView.findViewById(R.id.progressBar);
         }
     }
 

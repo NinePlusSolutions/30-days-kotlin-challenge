@@ -2,11 +2,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="240dp"
+    android:layout_height="@dimen/dp_240"
     android:background="@color/primary">
 
     <ImageView
-        android:id="@+id/item_mail_img"
+        android:id="@+id/ivUser"
         android:layout_width="@dimen/dp_42"
         android:layout_height="@dimen/dp_42"
         android:layout_marginStart="@dimen/dp_16"
@@ -21,25 +21,25 @@
         app:layout_constraintVertical_bias="0.146" />
 
     <TextView
-        android:id="@+id/tv_item_user_name"
+        android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="@dimen/dp_8"
         android:text="@string/text_name"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/tv_item_user_address"
+        app:layout_constraintEnd_toStartOf="@+id/tvAddress"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toTopOf="@+id/item_mail_img"
+        app:layout_constraintTop_toTopOf="@+id/ivUser"
         app:layout_constraintWidth_default="wrap" />
 
     <TextView
-        android:id="@+id/tv_item_comment_content"
+        android:id="@+id/tvComment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_16"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="@dimen/dp_16"
         android:lines="5"
         android:text="@string/text_comment"
         android:textColor="@color/white"
@@ -47,37 +47,37 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/item_mail_img"
-        app:layout_constraintTop_toBottomOf="@+id/tv_item_user_name"
+        app:layout_constraintStart_toEndOf="@+id/ivUser"
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
         app:layout_constraintVertical_bias="0.302"
         app:layout_constraintWidth_default="wrap" />
 
     <TextView
-        android:id="@+id/tv_item_user_address"
+        android:id="@+id/tvAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
+        android:layout_marginEnd="@dimen/dp_4"
         android:text="@string/text_address"
         android:textColor="@color/color_text"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/tv_crt"
-        app:layout_constraintTop_toTopOf="@+id/tv_item_user_name" />
+        app:layout_constraintStart_toEndOf="@+id/tvCrt"
+        app:layout_constraintTop_toTopOf="@+id/tvName" />
 
     <TextView
-        android:id="@+id/tv_crt"
+        android:id="@+id/tvCrt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="68dp"
+        android:layout_marginEnd="@dimen/dp_68"
         android:text="@string/crt_a"
         android:textColor="@color/color_text"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
-        app:layout_constraintTop_toTopOf="@+id/tv_item_user_name" />
+        app:layout_constraintTop_toTopOf="@+id/tvName" />
 
     <TextView
-        android:id="@+id/tv_item_user_time"
+        android:id="@+id/tvTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/dp_16"
@@ -86,8 +86,8 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toEndOf="@+id/tv_item_user_address"
-        app:layout_constraintTop_toTopOf="@+id/tv_item_user_name" />
+        app:layout_constraintStart_toEndOf="@+id/tvAddress"
+        app:layout_constraintTop_toTopOf="@+id/tvName" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -97,14 +97,14 @@
         app:layout_constraintGuide_begin="@dimen/dp_160" />
 
     <ImageButton
-        android:id="@+id/btn_comment"
+        android:id="@+id/btnComment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_48"
         android:background="@android:color/transparent"
         android:contentDescription="@string/item_comment"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_caches"
+        app:layout_constraintEnd_toStartOf="@+id/btnCaches"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline3"
@@ -112,44 +112,44 @@
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/btn_caches"
+        android:id="@+id/btnCaches"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         android:contentDescription="@string/item_caches"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_like"
+        app:layout_constraintEnd_toStartOf="@+id/btnLike"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn_comment"
+        app:layout_constraintStart_toEndOf="@+id/btnComment"
         app:layout_constraintTop_toTopOf="@+id/guideline3"
         app:srcCompat="@drawable/ic_baseline_cached_24"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <ImageButton
-        android:id="@+id/btn_like"
+        android:id="@+id/btnLike"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         android:contentDescription="@string/item_like"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton6"
+        app:layout_constraintEnd_toStartOf="@+id/btnShare"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn_caches"
+        app:layout_constraintStart_toEndOf="@+id/btnCaches"
         app:layout_constraintTop_toTopOf="@+id/guideline3"
         app:srcCompat="@drawable/ic_outline_favorite_border_24"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/btnShare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="48dp"
+        android:layout_marginEnd="@dimen/dp_48"
         android:background="@android:color/transparent"
         android:contentDescription="@string/item_share"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn_like"
+        app:layout_constraintStart_toEndOf="@+id/btnLike"
         app:layout_constraintTop_toTopOf="@+id/guideline3"
         app:srcCompat="@drawable/ic_baseline_share_24"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
@@ -159,13 +159,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="66dp" />
+        app:layout_constraintGuide_begin="@dimen/dp_66" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="214dp" />
+        app:layout_constraintGuide_begin="@dimen/dp_214" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,4 +6,10 @@
     <dimen name="sp_18">18sp</dimen>
     <dimen name="dp_160">160dp</dimen>
     <dimen name="dp_48">48dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_214">214dp</dimen>
+    <dimen name="dp_66">66dp</dimen>
+    <dimen name="dp_68">68dp</dimen>
+    <dimen name="dp_4">4dp</dimen>
+    <dimen name="dp_240">240dp</dimen>
 </resources>

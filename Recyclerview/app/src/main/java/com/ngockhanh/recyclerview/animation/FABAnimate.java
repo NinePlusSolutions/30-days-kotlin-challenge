@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.Objects;
+
 public class FABAnimate extends FloatingActionButton.Behavior {
     public FABAnimate(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -29,7 +31,7 @@ public class FABAnimate extends FloatingActionButton.Behavior {
         LinearLayoutManager linearLayoutManager = (LinearLayoutManager) ((RecyclerView) target).getLayoutManager();
         if (dyConsumed > 0
                 && child.getVisibility() == View.VISIBLE
-                && (linearLayoutManager.findFirstVisibleItemPosition() != 0)) {
+                && (Objects.requireNonNull(linearLayoutManager).findFirstVisibleItemPosition() != 0)) {
 
             //nếu gọi child.hide(); thì sau đó FAB không còn nhận sự kiện cuộn lên xuống nữa
             //nên cần gọi child.hide(listener);
@@ -42,10 +44,14 @@ public class FABAnimate extends FloatingActionButton.Behavior {
                 }
             });
 
-        } else if (dyConsumed < 0
-                && child.getVisibility() != View.VISIBLE
-                && (linearLayoutManager.findFirstVisibleItemPosition() == 0)) {
-            child.show();
+        } else {
+            if (dyConsumed < 0
+                    && child.getVisibility() != View.VISIBLE) {
+                assert linearLayoutManager != null;
+                if (linearLayoutManager.findFirstVisibleItemPosition() == 0) {
+                    child.show();
+                }
+            }
         }
     }
 
