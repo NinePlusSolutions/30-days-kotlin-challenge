@@ -1,19 +1,23 @@
 package com.ngockhanh.recyclerview.model;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     private String name;
     private String address;
     private String time;
     private String comment;
+    private Boolean like;
 
     public User() {
     }
 
-    public User(String name, String address, String time, String comment) {
+    public User(String name, String address, String time, String comment,Boolean like) {
         this.name = name;
         this.address = address;
         this.time = time;
         this.comment = comment;
+        this.like = like;
     }
 
     public String getName() {
@@ -46,5 +50,13 @@ public class User {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public Boolean getLike() {
+        return like;
+    }
+
+    public void setLike(Boolean like) {
+        this.like = like;
     }
 }

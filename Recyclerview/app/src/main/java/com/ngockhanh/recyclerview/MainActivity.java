@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
@@ -13,6 +14,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.ngockhanh.recyclerview.adapter.UserAdapter;
+import com.ngockhanh.recyclerview.inter.IClickItemUserListener;
 import com.ngockhanh.recyclerview.model.User;
 
 import java.util.ArrayList;
@@ -76,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setFirstData() {
         mListUser = getListUser();
-        userAdapter.setData(mListUser);
+        userAdapter.setData(mListUser, user -> onClickDetail(user));
         if (currentPage < totalPage) {
             userAdapter.addFooterLoading();
         } else {
@@ -103,12 +105,12 @@ public class MainActivity extends AppCompatActivity {
 
     private List<User> getListUser() {
         List<User> list = new ArrayList<>();
-        User user1 = new User("Amanda", "Canada", "5h ago", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s");
-        User user2 = new User("Neha", "Puniabe", "2h ago", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s");
-        User user3 = new User("Jack", "Callfonia", "5h ago", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s");
-        User user4 = new User("Khanh", "VietNam", "10h ago", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s");
-        User user5 = new User("Hai", "Malaysia", "10h ago", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s");
-        User user6 = new User("Duong", "Canada", "5h ago", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s");
+        User user1 = new User("Amanda", "Canada", "5h ago", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s",true);
+        User user2 = new User("Neha", "Puniabe", "2h ago", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s",false);
+        User user3 = new User("Jack", "Callfonia", "5h ago", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s",false);
+        User user4 = new User("Khanh", "VietNam", "10h ago", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s",false);
+        User user5 = new User("Hai", "Malaysia", "10h ago", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s",false);
+        User user6 = new User("Duong", "Canada", "5h ago", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s",false);
 
         list.add(user1);
         list.add(user2);
@@ -122,12 +124,12 @@ public class MainActivity extends AppCompatActivity {
 
     private List<User> getNewListUser() {
         List<User> list = new ArrayList<>();
-        User user7 = new User("Mam", "Canada", "5h ago", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s");
-        User user8 = new User("Dung", "Puniabe", "2h ago", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s");
-        User user9 = new User("Minh", "Callfonia", "5h ago", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s");
-        User user10 = new User("Tan", "VietNam", "10h ago", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s");
-        User user11 = new User("Hoang", "Malaysia", "10h ago", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s");
-        User user12 = new User("Hai", "Canada", "5h ago", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s");
+        User user7 = new User("Mam", "Canada", "5h ago", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s",false);
+        User user8 = new User("Dung", "Puniabe", "2h ago", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s",false);
+        User user9 = new User("Minh", "Callfonia", "5h ago", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s",false);
+        User user10 = new User("Tan", "VietNam", "10h ago", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s",false);
+        User user11 = new User("Hoang", "Malaysia", "10h ago", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s",false);
+        User user12 = new User("Hai", "Canada", "5h ago", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s",false);
 
         list.add(user7);
         list.add(user8);
@@ -137,5 +139,12 @@ public class MainActivity extends AppCompatActivity {
         list.add(user12);
 
         return list;
+    }
+    private void onClickDetail(User user){
+        Intent intent = new Intent(this,DetailActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("user",user);
+        intent.putExtras(bundle);
+        startActivity(intent);
     }
 }
