@@ -27,9 +27,9 @@ class Adapter(private val listUser: ArrayList<UserModel>) :
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val textViewUsername: TextView = itemView.findViewById(R.id.textViewUsername)
-        val textViewLocation: TextView = itemView.findViewById(R.id.textViewLocation)
-        val textViewTime: TextView = itemView.findViewById(R.id.textViewTime)
+        val textViewUsername: TextView = itemView.findViewById(R.id.tv_username)
+        val textViewLocation: TextView = itemView.findViewById(R.id.tv_location)
+        val textViewTime: TextView = itemView.findViewById(R.id.tv_time)
 
     }
 }

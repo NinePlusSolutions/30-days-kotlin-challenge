@@ -1,7 +1,7 @@
 package com.example.test_duration_4h
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         textViewLocation = arrayOf("@VietNam", "@California", "@Japan", "@China", "@ThaiLand")
         textViewTime = arrayOf("5h ago", "15m ago", "6d ago", "Just a few sec", "4 mins ago")
 
-        newRecyclerView = findViewById(R.id.recyclerView)
+        newRecyclerView = findViewById(R.id.rcv_page)
         newRecyclerView.layoutManager = LinearLayoutManager(this)
         newRecyclerView.setHasFixedSize(true)
 

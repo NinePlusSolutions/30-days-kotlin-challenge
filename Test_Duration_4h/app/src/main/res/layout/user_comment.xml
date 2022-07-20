@@ -7,7 +7,7 @@
     >
 
     <ImageView
-        android:id="@+id/imageViewAvatar"
+        android:id="@+id/img_view_avatar"
         android:layout_width="@dimen/_60sdp"
         android:layout_height="@dimen/_60sdp"
         android:layout_marginStart="-1dp"
@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/ic_user" />
 
     <TextView
-        android:id="@+id/textViewUsername"
+        android:id="@+id/tv_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/white"
@@ -26,11 +26,11 @@
         android:layout_marginTop="@dimen/_25sdp"
         android:text="@string/eric"
         android:textSize="@dimen/_12sdp"
-        app:layout_constraintStart_toEndOf="@+id/imageViewAvatar"
+        app:layout_constraintStart_toEndOf="@+id/img_view_avatar"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewContent"
+        android:id="@+id/tv_content"
         android:layout_width="283dp"
         android:layout_height="102dp"
         android:layout_marginStart="32dp"
@@ -38,10 +38,10 @@
         android:textColor="@android:color/white"
         android:text="@string/content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageViewAvatar" />
+        app:layout_constraintStart_toEndOf="@+id/img_view_avatar" />
 
     <TextView
-        android:id="@+id/textViewTime"
+        android:id="@+id/tv_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_160sdp"
@@ -49,11 +49,11 @@
         android:text="@string/time"
         android:textColor="@color/grey"
         android:textSize="@dimen/_10sdp"
-        app:layout_constraintStart_toEndOf="@+id/imageViewAvatar"
+        app:layout_constraintStart_toEndOf="@+id/img_view_avatar"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewLocation"
+        android:id="@+id/tv_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_85sdp"
@@ -61,22 +61,22 @@
         android:text="@string/california"
         android:textColor="@color/grey"
         android:textSize="@dimen/_10sdp"
-        app:layout_constraintStart_toEndOf="@+id/imageViewAvatar"
+        app:layout_constraintStart_toEndOf="@+id/img_view_avatar"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageViewComment"
+        android:id="@+id/img_view_comment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="96dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewContent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_content"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_comment" />
 
     <ImageView
-        android:id="@+id/imageViewReaction"
+        android:id="@+id/img_view_reaction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="116dp"
@@ -84,12 +84,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.052"
-        app:layout_constraintStart_toEndOf="@+id/imageViewComment"
-        app:layout_constraintTop_toBottomOf="@+id/textViewContent"
+        app:layout_constraintStart_toEndOf="@+id/img_view_comment"
+        app:layout_constraintTop_toBottomOf="@+id/tv_content"
         app:srcCompat="@drawable/ic_reaction" />
 
     <ImageView
-        android:id="@+id/imageViewRefresh"
+        android:id="@+id/img_view_refresh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
@@ -97,19 +97,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.054"
-        app:layout_constraintStart_toEndOf="@+id/imageViewComment"
-        app:layout_constraintTop_toBottomOf="@+id/textViewContent"
+        app:layout_constraintStart_toEndOf="@+id/img_view_comment"
+        app:layout_constraintTop_toBottomOf="@+id/tv_content"
         app:srcCompat="@drawable/ic_refresh" />
 
     <ImageView
-        android:id="@+id/imageViewShare"
+        android:id="@+id/img_view_share"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="204dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageViewComment"
-        app:layout_constraintTop_toTopOf="@+id/imageViewReaction"
+        app:layout_constraintStart_toEndOf="@+id/img_view_comment"
+        app:layout_constraintTop_toTopOf="@+id/img_view_reaction"
         app:srcCompat="@drawable/ic_share" />
 
     <View
@@ -118,6 +118,6 @@
         android:layout_margin="6dp"
         android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageViewComment" />
+        app:layout_constraintTop_toBottomOf="@id/img_view_comment" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
