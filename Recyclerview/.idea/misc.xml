@@ -8,6 +8,7 @@
         <entry key="app/src/main/res/drawable/image_rounded.xml" value="0.134" />
         <entry key="app/src/main/res/layout/activity_detail.xml" value="0.4132186889648438" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.13229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_detail.xml" value="0.15070921985815602" />
         <entry key="app/src/main/res/layout/item_loading.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_song.xml" value="0.335" />
         <entry key="app/src/main/res/layout/item_user.xml" value="0.25" />

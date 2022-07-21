@@ -16,17 +16,20 @@ import com.ngockhanh.recyclerview.inter.IClickItemUserListener;
 import com.ngockhanh.recyclerview.model.User;
 
 import java.util.List;
+
 public class UserAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private static final int TYPE_ITEM = 1;
     private static final int TYPE_LOADING = 2;
-    private List<User> mUserList;
+    private static List<User> mUserList;
     private boolean isLoadingAdd;
-    private IClickItemUserListener iClickItemUserListener;
+    private static IClickItemUserListener iClickItemUserListener;
 
-    public void setData(List<User> mUserList,IClickItemUserListener iClickItemUserListener) {
-        this.mUserList = mUserList;
-        this.iClickItemUserListener = iClickItemUserListener;
-        notifyDataSetChanged();
+    public UserAdapter(IClickItemUserListener iClickItemUserListener) {
+        UserAdapter.iClickItemUserListener = iClickItemUserListener;
+    }
+
+    public void setData(List<User> mUserList) {
+        UserAdapter.mUserList = mUserList;
     }
 
     @Override
@@ -51,31 +54,15 @@ public class UserAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        if (holder.getItemViewType() == TYPE_ITEM) {
-            User user = mUserList.get(position);
-            UserViewHolder userViewHolder = (UserViewHolder) holder;
-            userViewHolder.tvUserName.setText(user.getName());
-            userViewHolder.tvUserComment.setText(user.getComment());
-            userViewHolder.tvUserTime.setText(user.getTime());
-            userViewHolder.tvUserAddress.setText(user.getAddress());
-            userViewHolder.btnLike.setImageResource(
-                    user.getLike() ?R.drawable.ic_baseline_favorite_24_red:R.drawable.ic_outline_favorite_border_24
-            );
+        if (holder instanceof UserViewHolder) {
+            ((UserViewHolder) holder).bind(holder);
+        }
+    }
 
-            userViewHolder.btnLike.setOnClickListener(view -> {
-                if(!user.getLike()){
-                   user.setLike(true);
-                    userViewHolder.btnLike.setImageResource(
-                            R.drawable.ic_baseline_favorite_24_red
-                    );
-                }
-            });
-            userViewHolder.layoutItem.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    iClickItemUserListener.onClickItemUser(user);
-                }
-            });
+    @Override
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position, @NonNull List<Object> payloads) {
+        if (holder instanceof UserViewHolder) {
+            ((UserViewHolder) holder).bind(holder);
         }
     }
 
@@ -92,8 +79,8 @@ public class UserAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         private final TextView tvUserAddress;
         private final TextView tvUserTime;
         private final TextView tvUserComment;
-        private ImageButton btnLike;
-        private ConstraintLayout layoutItem;
+        private final ImageButton btnLike;
+        private final ConstraintLayout layoutItem;
 
         public UserViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -103,6 +90,23 @@ public class UserAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             tvUserComment = itemView.findViewById(R.id.tvComment);
             btnLike = itemView.findViewById(R.id.btnLike);
             layoutItem = itemView.findViewById(R.id.layoutItem);
+        }
+
+        public void bind(final RecyclerView.ViewHolder holder) {
+            if (holder.getItemViewType() == TYPE_ITEM) {
+                User user = mUserList.get(holder.getAdapterPosition());
+                UserViewHolder userViewHolder = (UserViewHolder) holder;
+                userViewHolder.tvUserName.setText(user.getName());
+                userViewHolder.tvUserComment.setText(user.getComment());
+                userViewHolder.tvUserTime.setText(user.getTime());
+                userViewHolder.tvUserAddress.setText(user.getAddress());
+                userViewHolder.btnLike.setImageResource(
+                        user.getLike() ? R.drawable.ic_baseline_favorite_24_red : R.drawable.ic_outline_favorite_border_24
+                );
+                userViewHolder.btnLike.setOnClickListener(view -> iClickItemUserListener.onLikedClickItemListener(user, holder.getAdapterPosition()));
+
+                userViewHolder.layoutItem.setOnClickListener(view -> iClickItemUserListener.onClickItemUser(user));
+            }
         }
     }
 
@@ -115,13 +119,12 @@ public class UserAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     }
 
     public void addFooterLoading() {
-        mUserList.add(new User("", "", "", "",false));
+        mUserList.add(new User("", "", "", "", false));
         isLoadingAdd = true;
     }
 
     public void removeFooterLoading() {
         isLoadingAdd = false;
-
         int position = mUserList.size() - 1;
         User user = mUserList.get(position);
         if (user != null) {

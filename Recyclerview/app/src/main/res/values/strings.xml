@@ -13,4 +13,6 @@
     <string name="item_share">item_share</string>
     <string name="fab_content_desc">desc</string>
     <string name="crt_a">\@</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
