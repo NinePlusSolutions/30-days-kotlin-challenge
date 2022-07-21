@@ -73,18 +73,8 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void onLikeClick(Comment comment){
-        if(!comment.getLike()){
-            comment.setLike(true);
-            btnLike.setImageResource(
-                    R.drawable.ic_baseline_favorite_24
-            );
-        }
-        else{
-            comment.setLike(false);
-            btnLike.setImageResource(
-                    R.drawable.ic_baseline_favorite_border_24
-            );
-        }
+        comment.setLike(!comment.getLike());
+        btnLike.setImageResource(comment.getLike() ?R.drawable.ic_baseline_favorite_24:R.drawable.ic_baseline_favorite_border_24);
 
         Intent data = new Intent();
         data.putExtra(EXTRA_DATA, comment);

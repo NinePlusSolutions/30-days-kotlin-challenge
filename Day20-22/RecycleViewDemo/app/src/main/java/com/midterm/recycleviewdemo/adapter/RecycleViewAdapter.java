@@ -44,7 +44,6 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     @Override
     public int getItemViewType(int position) { return commentList.get(position) == null ? typeLoading : typeItem; }
 
-
     public void setData(List<Comment> commentList){
         this.commentList = commentList;
     }
@@ -59,8 +58,8 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
         public void onBindingData(Comment comment) {
             this.itemBinding.tvUserName.setText(comment.getCommentUserName());
-            this.itemBinding.tvUserName.setText(comment.getCommentUserTagName());
-            this.itemBinding.tvCommentContent.setText(comment.getCommentTime());
+            this.itemBinding.tvUserTagName.setText(comment.getCommentUserTagName());
+            this.itemBinding.tvTimeComment.setText(comment.getCommentTime());
             this.itemBinding.tvCommentContent.setText(comment.getCommentContent());
             this.itemBinding.ivLike.setImageResource(comment.getLike() ?R.drawable.ic_baseline_favorite_24:R.drawable.ic_baseline_favorite_border_24);
             this.itemBinding.ivLike.setOnClickListener(view -> {
