@@ -2,41 +2,32 @@ package com.example.test_duration_4h
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.example.test_duration_4h.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
-    private lateinit var newRecyclerView : RecyclerView
-    private lateinit var newArrayList : ArrayList<UserModel>
-    private lateinit var textViewUsername: Array<String>
-    private lateinit var textViewLocation: Array<String>
-    private lateinit var textViewTime: Array<String>
+    private lateinit var pageAdapter: PageAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        val viewBinding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(viewBinding.rootView)
 
-        textViewUsername = arrayOf("Jack", "Tommy", "Thomas", "John", "Soda")
-        textViewLocation = arrayOf("@VietNam", "@California", "@Japan", "@China", "@ThaiLand")
-        textViewTime = arrayOf("5h ago", "15m ago", "6d ago", "Just a few sec", "4 mins ago")
-
-        newRecyclerView = findViewById(R.id.rcv_page)
-        newRecyclerView.layoutManager = LinearLayoutManager(this)
-        newRecyclerView.setHasFixedSize(true)
-
-        newArrayList = arrayListOf()
-        getUserData()
+        // Setup adapter and fetch data on screen
+        pageAdapter = PageAdapter()
+        viewBinding.rvPage.adapter = pageAdapter
+        pageAdapter.addData(this.mockUserData())
     }
 
-    private fun getUserData() {
+    private fun mockUserData(): MutableList<UserModel> {
+        val users = mutableListOf<UserModel>()
+        users.add(UserModel(username = "Johnny", location = "Da Nang", time = "Today"))
+        users.add(UserModel(username = "Johnny2", location = "Da Nang", time = "Today"))
+        users.add(UserModel(username = "Johnny3", location = "Da Nang", time = "Today"))
+        users.add(UserModel(username = "Johnny4", location = "Da Nang", time = "Today"))
+        users.add(UserModel(username = "Johnny5", location = "Da Nang", time = "Today"))
+        users.add(UserModel(username = "Johnny6", location = "Da Nang", time = "Today"))
+        users.add(UserModel(username = "Johnny7", location = "Da Nang", time = "Today"))
 
-        for (i in textViewUsername.indices){
-
-            val users = UserModel(textViewUsername[i], textViewLocation[i], textViewTime[i])
-            newArrayList.add(users)
-        }
-
-        newRecyclerView.adapter = Adapter(newArrayList)
+        return users
     }
 }
