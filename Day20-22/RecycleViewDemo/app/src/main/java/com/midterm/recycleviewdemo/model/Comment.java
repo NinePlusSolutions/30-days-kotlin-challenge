@@ -1,50 +1,94 @@
 package com.midterm.recycleviewdemo.model;
 
-public class Comment {
-    private String nameUser;
-    private String tagName;
-    private String time;
-    private String comment;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Comment  implements Parcelable {
+    private String commentUserName;
+    private String commentUserTagName;
+    private String commentTime;
+    private String commentContent;
+    private Boolean like;
 
     public Comment() {
     }
 
-    public Comment(String nameUser, String tagName, String time, String comment) {
-        this.nameUser = nameUser;
-        this.tagName = tagName;
-        this.time = time;
-        this.comment = comment;
+    public Comment(String commentUserName, String commentUserTagName, String commentTime, String commentContent, Boolean like) {
+        this.commentUserName = commentUserName;
+        this.commentUserTagName = commentUserTagName;
+        this.commentTime = commentTime;
+        this.commentContent = commentContent;
+        this.like = like;
     }
 
-    public String getnameUser() {
-        return nameUser;
+    protected Comment(Parcel in) {
+        commentUserName = in.readString();
+        commentUserTagName = in.readString();
+        commentTime = in.readString();
+        commentContent = in.readString();
+        byte tmpLike = in.readByte();
+        like = tmpLike == 0 ? null : tmpLike == 1;
     }
 
-    public void setnameUser(String nameUser) {
-        this.nameUser = nameUser;
+    @Override
+    public int describeContents() {
+        return 0;
     }
 
-    public String gettagName() {
-        return tagName;
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(commentUserName);
+        dest.writeString(commentUserTagName);
+        dest.writeString(commentTime);
+        dest.writeString(commentContent);
+        dest.writeByte((byte) (like == null ? 0 : like ? 1 : 2));
     }
 
-    public void settagName(String tagName) {
-        this.tagName = tagName;
+    public static final Creator<Comment> CREATOR = new Creator<Comment>() {
+        @Override
+        public Comment createFromParcel(Parcel in) {
+            return new Comment(in);
+        }
+
+        @Override
+        public Comment[] newArray(int size) {
+            return new Comment[size];
+        }
+    };
+
+    public String getCommentUserName() {
+        return commentUserName;
     }
 
-    public String gettime() {
-        return time;
+    public void setCommentUserName(String CommentUserName) {this.commentUserName = CommentUserName;}
+
+    public String getCommentUserTagName() {
+        return commentUserTagName;
     }
 
-    public void settime(String time) {
-        this.time = time;
+    public void setCommentUserTagName(String commentUserTagName) {this.commentUserTagName = commentUserTagName; }
+
+    public String getCommentTime() {
+        return commentTime;
     }
 
-    public String getcomment() {
-        return comment;
+    public void setCommentTime(String commentTime) {
+        this.commentTime = commentTime;
     }
 
-    public void setcomment(String comment) {
-        this.comment = comment;
+    public String getCommentContent() {
+        return commentContent;
     }
+
+    public void setCommentContent(String commentContent) {
+        this.commentContent = commentContent;
+    }
+
+    public Boolean getLike() {return like;}
+
+    public void setLike(Boolean like) {
+        this.like = like;
+    }
+
 }

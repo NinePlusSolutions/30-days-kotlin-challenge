@@ -4,12 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android Studio Project Folder/Exercise/RecycleViewDemo/app/src/main/res/drawable/avatar.xml" value="0.1045" />
+        <entry key="..\:/Android Studio Project Folder/Exercise/RecycleViewDemo/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.137" />
         <entry key="..\:/Android Studio Project Folder/Exercise/RecycleViewDemo/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1045" />
-        <entry key="..\:/Android Studio Project Folder/Exercise/RecycleViewDemo/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Android Studio Project Folder/Exercise/RecycleViewDemo/app/src/main/res/layout/item.xml" value="0.17028985507246377" />
+        <entry key="..\:/Android Studio Project Folder/Exercise/RecycleViewDemo/app/src/main/res/layout/activity_detail.xml" value="0.22" />
+        <entry key="..\:/Android Studio Project Folder/Exercise/RecycleViewDemo/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Android Studio Project Folder/Exercise/RecycleViewDemo/app/src/main/res/layout/item.xml" value="0.25" />
         <entry key="..\:/Android Studio Project Folder/Exercise/RecycleViewDemo/app/src/main/res/layout/item_load_more.xml" value="0.17028985507246377" />
         <entry key="..\:/Android Studio Project Folder/Exercise/RecycleViewDemo/app/src/main/res/layout/item_song1.xml" value="0.25" />
         <entry key="..\:/Android Studio Project Folder/Exercise/RecycleViewDemo/app/src/main/res/layout/item_song2.xml" value="0.25" />
+        <entry key="..\:/Users/ABC/Desktop/Ca Nhan/Job/Nine Plus Solution/kotlin/30 days challenges/30-days-kotlin-challenge/Day20-22/RecycleViewDemo/app/src/main/res/layout/item.xml" value="0.16111111111111112" />
       </map>
     </option>
   </component>

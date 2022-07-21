@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DetailActivity"
+    android:background="@color/grey">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titleDetail"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guideLineVertical0.5"
+        app:layout_constraintEnd_toEndOf="@id/guideLineVertical0.5"
+        app:layout_constraintTop_toTopOf="@id/guideLineHorizontal0.08"
+        app:layout_constraintBottom_toBottomOf="@id/guideLineHorizontal0.08"
+
+        />
+
+    <ImageView
+        android:id = "@+id/ivAvatar"
+        android:layout_width = "@dimen/_58sdp"
+        android:layout_height = "@dimen/_58sdp"
+        app:layout_constraintStart_toStartOf="@id/guideLineVertical0.12"
+        app:layout_constraintEnd_toEndOf="@id/guideLineVertical0.12"
+        app:layout_constraintTop_toTopOf="@id/guideLineHorizontal0.20"
+        app:layout_constraintBottom_toBottomOf="@id/guideLineHorizontal0.20"
+        android:background = "@drawable/avatar"
+        android:contentDescription="@string/avatar" />
+
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/ivAvatar"
+        android:layout_marginStart="@dimen/_5sdp"
+        app:layout_constraintTop_toTopOf="@id/guideLineHorizontal0.205"
+        app:layout_constraintBottom_toBottomOf="@id/guideLineHorizontal0.205"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvCommentDetailUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/tvCommentDetailUserTagName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:text="@string/user_tagname"
+                android:textColor="@color/greyLight"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/tvDetailCommentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:text="@string/time"
+                android:textColor="@color/greyLight"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvCommentDetailContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:text="@string/comment1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/_160sdp" />
+
+    <ImageButton
+        android:id="@+id/btnLikeDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/item_like"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideLineHorizontal0.08"
+        app:layout_constraintBottom_toBottomOf="@id/guideLineHorizontal0.08"
+        android:layout_marginEnd="@dimen/_15sdp"
+        app:srcCompat="@drawable/ic_baseline_favorite_border_24"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineVertical0.12"
+        app:layout_constraintGuide_percent="0.12"
+        style="@style/guideLineVertical"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineVertical0.5"
+        app:layout_constraintGuide_percent="0.5"
+        style="@style/guideLineVertical"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineHorizontal0.08"
+        app:layout_constraintGuide_percent="0.08"
+        style="@style/guideLineHorizontal"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineHorizontal0.20"
+        app:layout_constraintGuide_percent="0.20"
+        style="@style/guideLineHorizontal"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineHorizontal0.205"
+        app:layout_constraintGuide_percent="0.205"
+        style="@style/guideLineHorizontal" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineHorizontal0.25"
+        app:layout_constraintGuide_percent="0.25"
+        style="@style/guideLineHorizontal"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineHorizontal0.90"
+        app:layout_constraintGuide_percent="0.90"
+        style="@style/guideLineHorizontal"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
