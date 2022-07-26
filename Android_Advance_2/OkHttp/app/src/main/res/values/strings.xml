@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">OkHttp</string>
+    <string name="get_url">Get URL</string>
+    <string name="enter_url">Enter your URL</string>
+    <string name="get_it">Get it!</string>
+    <string name="get_back">Get Back</string>
+</resources>
