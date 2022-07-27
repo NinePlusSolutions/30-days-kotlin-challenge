@@ -28,9 +28,7 @@ public class GetURL extends AppCompatActivity {
         Button btnGetIt = findViewById(R.id.btnGetIt);
         EditText edtURL = findViewById(R.id.edtURL);
 
-        btnGetIt.setOnClickListener(view -> {
-            new GetThisURL().execute("http://"+edtURL.getText().toString().trim());
-        });
+        btnGetIt.setOnClickListener(view -> new GetThisURL().execute("http://"+edtURL.getText().toString().trim()));
 
         Button btnGetBack = findViewById(R.id.btnGetBack);
 
