@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">ReadyViva</string>
-    <string name="save">SAVE</string>
-    <string name="id_here">id here..</string>
-    <string name="name_here">Name here..</string>
-    <string name="marks_here">Marks here..</string>
-    <string name="go">Go</string>
-
-</resources>
