@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">CreateUILoginScreen</string>
+    <string name="courier_service">courier_service</string>
+    <string name="welcome_back">Welcome back</string>
+    <string name="sign_to_continue">Sign to continue</string>
+    <string name="email">Email</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="don_t_have_account">don\'t have account ?</string>
+    <string name="create_a_new_account">Create a new account</string>
+    <string name="create_account">Create Account</string>
+    <string name="username">Username</string>
+    <string name="john_son">John Son</string>
+    <string name="you_email_com">you@email.com</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="phone">Phone</string>
+    <string name="phone_number">Phone number</string>
+</resources>
