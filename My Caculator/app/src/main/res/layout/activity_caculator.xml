@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CaculatorActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineHorizontal0.10"
+        style="@style/guideLineHorizontal"
+        app:layout_constraintGuide_percent="0.10" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineHorizontal0.20"
+        style="@style/guideLineHorizontal"
+        app:layout_constraintGuide_percent="0.20" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineHorizontal0.30"
+        style="@style/guideLineHorizontal"
+        app:layout_constraintGuide_end="464dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineHorizontal0.50"
+        style="@style/guideLineHorizontal"
+        app:layout_constraintGuide_begin="293dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineHorizontal0.57"
+        style="@style/guideLineHorizontal"
+        app:layout_constraintGuide_percent="0.57" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineHorizontal0.69"
+        style="@style/guideLineHorizontal"
+        app:layout_constraintGuide_percent="0.69" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineHorizontal0.81"
+        style="@style/guideLineHorizontal"
+        app:layout_constraintGuide_percent="0.81" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineHorizontal0.93"
+        style="@style/guideLineHorizontal"
+        app:layout_constraintGuide_percent="0.93" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineVertical0.15"
+        style="@style/guideLineVertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineVertical0.30"
+        style="@style/guideLineVertical"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineVertical0.40"
+        style="@style/guideLineVertical"
+        app:layout_constraintGuide_percent="0.40" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineVertical0.65"
+        style="@style/guideLineVertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineVertical0.90"
+        style="@style/guideLineVertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etinput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="@string/num0"
+        android:textAlignment="textEnd"
+        android:textSize="@dimen/_30ssp"
+        app:layout_constraintBottom_toBottomOf="@id/guideLineHorizontal0.10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideLineHorizontal0.10" />
+<TextView
+    android:id="@+id/etoutput"
+    android:maxLines="1"
+    app:layout_constraintTop_toTopOf="@id/guideLineHorizontal0.20"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="@id/guideLineHorizontal0.20"
+    tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="@id/guideLineHorizontal0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideLineHorizontal0.50"
+        app:layout_constraintVertical_bias="0.637">
+
+
+        <Button
+            android:id="@+id/btn1"
+            android:onClick="numberEvent"
+            style="@style/btnNumber"
+            android:text="@string/num1" />
+
+        <Button
+            android:id="@+id/btn2"
+            style="@style/btnNumber"
+            android:onClick="numberEvent"
+            android:text="@string/num2" />
+
+
+        <Button
+            android:id="@+id/btn3"
+            style="@style/btnNumber"
+            android:onClick="numberEvent"
+            android:text="@string/num3" />
+
+        <Button
+            android:id="@+id/btnplus"
+            android:onClick="showResult"
+            style="@style/btnOperator"
+            android:text="@string/plus" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="@id/guideLineHorizontal0.57"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideLineHorizontal0.57">
+
+
+        <Button
+            android:id="@+id/btn4"
+            style="@style/btnNumber"
+            android:onClick="numberEvent"
+            android:text="@string/num4" />
+
+        <Button
+            android:id="@+id/btn5"
+            style="@style/btnNumber"
+            android:onClick="numberEvent"
+            android:text="@string/num5" />
+
+
+        <Button
+            android:id="@+id/btn6"
+            style="@style/btnNumber"
+            android:onClick="numberEvent"
+            android:text="@string/num6" />
+
+        <Button
+            android:id="@+id/btnminus"
+            android:onClick="showResult"
+            style="@style/btnOperator"
+            android:text="@string/minus" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llhori057"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="@id/guideLineHorizontal0.69"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideLineHorizontal0.69">
+
+
+        <Button
+            android:id="@+id/btn7"
+            style="@style/btnNumber"
+            android:onClick="numberEvent"
+            android:text="@string/num7" />
+
+        <Button
+            android:id="@+id/btn8"
+            style="@style/btnNumber"
+            android:onClick="numberEvent"
+            android:text="@string/num8" />
+
+
+        <Button
+            android:id="@+id/btn9"
+            style="@style/btnNumber"
+            android:onClick="numberEvent"
+            android:text="@string/num9" />
+
+        <Button
+            android:id="@+id/btnmultiply"
+            android:onClick="showResult"
+           style="@style/btnOperator"
+            android:text="@string/multiply" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llhori069"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="@id/guideLineHorizontal0.81"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideLineHorizontal0.81">
+
+
+
+        <Button
+            android:id="@+id/btnc"
+            style="@style/btnNumber"
+            android:text="@string/numC" />
+        <Button
+            android:id="@+id/btn0"
+            style="@style/btnNumber"
+            android:onClick="numberEvent"
+            android:text="@string/num0" />
+
+
+
+        <Button
+            android:id="@+id/btnequal"
+            style="@style/btnNumber"
+            android:onClick="equalevent"
+            android:text="@string/equal" />
+        <Button
+            android:id="@+id/btndivide"
+            android:onClick="showResult"
+            style="@style/btnOperator"
+            android:text="@string/divide" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
