@@ -20,7 +20,9 @@ class CaculatorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_caculator)
-
+        btnEqual.setOnClickListener {
+            equalevent()
+        }
 
     }
 
@@ -104,6 +106,9 @@ class CaculatorActivity : AppCompatActivity() {
             }
             "*" -> {
                 result = oldNumber.toDouble() * newNumber.toDouble()
+            }
+            "/"->{
+                result = oldNumber.toDouble() / newNumber.toDouble()
             }
         }
         etinput.setText(result.toString())
