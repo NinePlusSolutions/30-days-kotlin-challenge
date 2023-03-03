@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/about_us"
+        android:title="@string/about_Us" />
+    <item
+        android:id="@+id/help"
+        android:title="@string/help" />
+    <group
+        android:id="@+id/menu_items"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/item_1"
+            android:title="@string/item_1" />
+        <item
+            android:id="@+id/item_2"
+            android:title="@string/item_2" />
+        <item
+            android:id="@+id/item_3"
+            android:title="@string/item_3" />
+    </group>
+</menu>

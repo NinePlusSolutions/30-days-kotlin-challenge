@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--Ảnh kín FrameLayout-->
+    <ImageView
+        android:src="@drawable/img"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--Button ở giữa, bên phải và cách mép phải FrameLayout 20dp-->
+    <Button
+        android:layout_gravity="center|right"
+        android:layout_marginRight="20dp"
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--Ảnh ở giữa, bên dưới FrameLayout-->
+    <ImageView
+        android:layout_gravity="center|bottom"
+        android:src="@drawable/img"
+        android:adjustViewBounds="true"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content" />
+
+    <!--Dòng chữ ở giữa, phần trên FrameLayout-->
+    <TextView
+        android:layout_gravity="center|top"
+        android:layout_marginTop="10dp"
+        android:text="Đây là một TextView"
+        android:layout_width="100dp"
+        android:gravity="center"
+        android:layout_height="wrap_content" />
+
+</FrameLayout>

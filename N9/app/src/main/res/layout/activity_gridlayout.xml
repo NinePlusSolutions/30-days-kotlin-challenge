@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:columnCount="4"
+    android:orientation="horizontal"
+    android:rowCount="4">
+
+    <TextView
+        android:padding="5dp"
+        android:text="A 1" />
+
+    <TextView
+        android:layout_gravity="fill_horizontal"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="A 2" />
+
+    <TextView
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="A 3" />
+
+    <TextView
+        android:padding="5dp"
+        android:text="B 1" />
+
+    <TextView
+        android:layout_gravity="fill_horizontal"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="B 2" />
+
+    <TextView
+        android:padding="5dp"
+        android:text="B 3" />
+
+    <TextView
+        android:padding="5dp"
+        android:text="B 4" />
+
+    <TextView
+        android:padding="5dp"
+        android:text="C 1" />
+
+    <TextView
+        android:layout_rowSpan="3"
+        android:layout_gravity="fill"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="C 2" />
+
+    <TextView
+        android:padding="5dp"
+        android:text="C 3" />
+
+    <TextView
+        android:padding="5dp"
+        android:text="C 4" />
+
+    <TextView
+        android:padding="5dp"
+        android:text="D 1" />
+
+    <TextView
+        android:padding="5dp"
+        android:text="D 2" />
+
+    <TextView
+        android:padding="5dp"
+        android:text="D 3" />
+
+
+</GridLayout>
