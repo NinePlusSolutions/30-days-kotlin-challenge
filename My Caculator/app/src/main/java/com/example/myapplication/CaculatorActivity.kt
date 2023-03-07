@@ -1,15 +1,11 @@
 package com.example.myapplication
 
 
-import android.graphics.Color.GREEN
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.TextView
-import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_caculator.*
-import kotlinx.android.synthetic.main.activity_caculator.view.*
 
 class CaculatorActivity : AppCompatActivity() {
 
@@ -29,7 +25,6 @@ class CaculatorActivity : AppCompatActivity() {
     private fun addToInputText(buttonValue: String): String {
         return etinput.text.toString() + "" + buttonValue
     }
-
 
     fun numberEvent(view: View) {
         if (isNewOp)
