@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Calculator MVP</string>
+    <string name="btnNum0">0</string>
+    <string name="btnNum1">1</string>
+    <string name="btnNum2">2</string>
+    <string name="btnNum3">3</string>
+    <string name="btnNum4">4</string>
+    <string name="btnNum5">5</string>
+    <string name="btnNum6">6</string>
+    <string name="btnNum7">7</string>
+    <string name="btnNum8">8</string>
+    <string name="btnNum9">9</string>
+    <string name="btnMultiplication">X</string>
+    <string name="btnSub">-</string>
+    <string name="btnPlus">+</string>
+    <string name="btnDivide">/</string>
+    <string name="btnEqual">=</string>
+    <string name="btnDelete">C</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="Home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="setting">Setting</string>
+
+</resources>
