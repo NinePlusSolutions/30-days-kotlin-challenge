@@ -94,6 +94,7 @@ lateinit var presenter: PresenterInterface.Presenter
     }
 
     override fun onDelete(value: String) {
+        binding.etinput.text=value
     }
 
 

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Student Data"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/etFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:hint="First Name"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/etLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Last Name"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:textSize="25sp"/>
+    <EditText
+        android:id="@+id/etRollNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Roll No"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:textSize="25sp"/>
+
+    <Button
+        android:id="@+id/btn_writeData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Write Data" />
+    <Button
+        android:id="@+id/btn_updateData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Update Data" />
+
+    <EditText
+        android:id="@+id/etRollNoRead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Roll No"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:textSize="25sp"/>
+    <Button
+        android:id="@+id/btn_readData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Read Data"/>
+    <Button
+        android:id="@+id/btn_DeleteData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Delete Data"/>
+    <TextView
+        android:id="@+id/tvFistname"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvLastname"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvrollNo"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>
